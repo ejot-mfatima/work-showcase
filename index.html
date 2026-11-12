@@ -52,22 +52,21 @@
   <div class="cards three">
     <div class="card c-tt big">
       <h3>Time Tracking</h3>
-      <div class="stats"><div><b>14</b><span>screens<br>(scaffold had 1)</span></div><div><b>4</b><span>roles in one<br>end-to-end flow</span></div><div><b>3</b><span>pull requests<br>merged</span></div></div>
-      <p>Clickable end-to-end prototype in the platform; backend contract and service built and in review.</p>
+      <p class="role-line">From recorded hour to SAP cost allocation</p>
+      <p>Employees record hours, project leads release them, controlling closes the month and posts to SAP — one guided, clickable end-to-end flow.</p>
     </div>
     <div class="card c-tm big">
       <h3>Task Management</h3>
-      <div class="stats"><div><b>13</b><span>tickets<br>delivered</span></div><div><b>29</b><span>pull requests<br>merged</span></div><div><b>85</b><span>automated tests<br>written</span></div></div>
-      <p>Full-stack product work: React frontend, Go backend, database migrations, notifications.</p>
+      <p class="role-line">Personal and team task boards</p>
+      <p>Boards, quick capture, a daily plan, due dates, team boards and notifications — full-stack product work on frontend and backend.</p>
     </div>
     <div class="card c-rm big">
       <h3>Risk Management</h3>
-      <div class="stats"><div><b>82</b><span>API operations<br>specified</span></div><div><b>14</b><span>screens<br>prototyped</span></div><div><b>12</b><span>business roles<br>modelled</span></div></div>
-      <p>Contract-first: architecture, API contract and a complete clickable prototype for stakeholder validation.</p>
+      <p class="role-line">IT/OT risks in one governed process</p>
+      <p>Risks, measures, rule-based approvals and the IT Risk Board — designed contract-first and validated with a complete clickable prototype.</p>
     </div>
   </div>
-  <p class="footnote">Figures from the Git history and merged pull requests of the respective repositories (status: 12 November 2026).</p>
-  <aside class="notes">The numbers are taken straight from Git and the merged pull requests — nothing estimated. I will be explicit in each chapter about what is a prototype and what is productive code.</aside>
+  <aside class="notes">One sentence per product, in the order I will present them. In each chapter I will be explicit about what is a prototype and what is productive code.</aside>
 </section>
 
 <!-- ============================== 01 TIME TRACKING ============================== -->
@@ -106,24 +105,21 @@
 <section class="tt">
   <p class="kicker">01 · Time Tracking · Starting point &amp; approach</p>
   <h2>From a one-page scaffold to a complete flow</h2>
-  <div class="cols wide-left">
+  <div class="cols">
     <div>
-      <ol class="timeline">
-        <li><time>Starting point</time><b>A generated app scaffold with a single page.</b> No screens, no data model, no written process description.</li>
-        <li><time>7 Sep</time><b>First deliverable:</b> cost-allocation prototype with 13 pages, live timer and a realistic data model.</li>
-        <li><time>8–9 Sep</time><b>Usability pass:</b> SAP-style timesheet, team status, grouped release queue, reminders, redesigned month-end close.</li>
-        <li><time>15–16 Sep</time><b>Reviewed and merged</b> (PR #8, PR #9).</li>
-        <li><time>22–29 Sep</time><b>Backend phase:</b> API contract (31 operations), Go service, 10 database migrations, permission model — in review.</li>
-        <li><time>28 Sep</time><b>Supervisor approval for non-chargeable time</b> merged (PR #10).</li>
-      </ol>
+      <h4>Starting point</h4>
+      <ul>
+        <li>A generated app scaffold with <b>a single page</b>.</li>
+        <li>No screens, no data model, no written process description.</li>
+      </ul>
     </div>
     <div>
-      <h4>How I worked</h4>
+      <h4>My approach</h4>
       <ul>
-        <li><b>Understand the process first</b> — roles, hand-overs and rules before any screen.</li>
-        <li><b>Make it clickable early</b> so the business can react to something real.</li>
-        <li><b>Write it down:</b> I authored the Application Guide and the Backend Integration guide.</li>
-        <li><b>Then harden:</b> contract, service and permissions as a second phase.</li>
+        <li><b>Understand the process first</b> — roles, hand-overs and rules.</li>
+        <li><b>Make it clickable early</b> so the business can react to real screens.</li>
+        <li><b>Refine for usability</b> — then document it.</li>
+        <li><b>Harden afterwards</b> — backend and permissions as a second phase.</li>
       </ul>
     </div>
   </div>
@@ -142,13 +138,7 @@
     <div class="flow-arrow">→</div>
     <div class="flow-step"><span class="role">Administrator</span><b>Keeps it running</b><em>projects, distribution keys, master data, permissions</em></div>
   </div>
-  <div class="rules">
-    <div><b>0.25 h</b><span>recording steps, max. 24 h per entry</span></div>
-    <div><b>8 h</b><span>timer auto-pause as a safety net</span></div>
-    <div><b>≥ 80 %</b><span>response rate before month close</span></div>
-    <div><b>100 %</b><span>every distribution key must add up</span></div>
-  </div>
-  <aside class="notes">These are the business rules built into the screens. I will now show each role's view in the order the process runs.</aside>
+  <aside class="notes">Four roles, each with a clear hand-over to the next. I will now show each role's view in the order the process runs.</aside>
 </section>
 
 <section class="tt">
@@ -268,14 +258,8 @@
 <section class="tt">
   <p class="kicker">01 · Time Tracking · Status &amp; next steps</p>
   <h2>Where Time Tracking stands today</h2>
-  <div class="cols">
+  <div class="cols three">
     <div>
-      <div class="statrow">
-        <div><b>14</b><span>screens</span></div>
-        <div><b>+16,163</b><span>lines of frontend code merged</span></div>
-        <div><b>3</b><span>PRs merged</span></div>
-        <div><b>2</b><span>guides written</span></div>
-      </div>
       <h4 class="ok">Delivered</h4>
       <ul>
         <li>Complete, clickable end-to-end flow for all four roles, merged in the platform repository.</li>
@@ -283,12 +267,14 @@
       </ul>
     </div>
     <div>
-      <h4 class="warn">Honest status</h4>
+      <h4 class="warn">Status</h4>
       <ul>
-        <li>The merged application is a <b>frontend prototype on sample data</b> — data resets on reload.</li>
-        <li>Backend (31 API operations, Go service, 10 migrations, permission model) is <b>built and in review</b>, not yet merged.</li>
+        <li>The merged application is a <b>frontend prototype on sample data</b>.</li>
+        <li>The backend is <b>built and in review</b>, not yet merged.</li>
         <li>No real SAP interface yet; no automated tests yet.</li>
       </ul>
+    </div>
+    <div>
       <h4>Next steps</h4>
       <ul>
         <li>Close the review, merge the backend, connect the screens to it.</li>

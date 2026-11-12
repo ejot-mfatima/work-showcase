@@ -69,6 +69,7 @@ html, body { background: var(--bg); }
 /* layouts */
 .reveal .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .reveal .cols.wide-left { grid-template-columns: 1.35fr 1fr; }
+.reveal .cols.three { grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .reveal .split { display: grid; grid-template-columns: 930px 1fr; gap: 30px; align-items: start; }
 .reveal .split .side { padding-top: 4px; font-size: 20px; }
 .reveal .split .side li { margin-bottom: 12px; line-height: 1.32; }
