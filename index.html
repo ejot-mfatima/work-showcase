@@ -29,7 +29,7 @@
 
 <section>
   <p class="kicker">Agenda</p>
-  <h2>One story line, told three times</h2>
+  <h2>Three projects, one clear storyline</h2>
   <div class="arc">
     <div class="arc-step"><span>1</span><b>Objective</b><em>Which business problem are we solving?</em></div>
     <div class="arc-step"><span>2</span><b>Starting point</b><em>What was asked, what already existed?</em></div>
@@ -48,7 +48,7 @@
 
 <section>
   <p class="kicker">At a glance</p>
-  <h2>Three months, three products</h2>
+  <h2>Three business needs, three solutions</h2>
   <div class="cards three">
     <div class="card c-tt big">
       <h3>Time Tracking</h3>
@@ -73,8 +73,8 @@
 <section class="divider tt">
   <p class="num">01</p>
   <h1>Time Tracking</h1>
-  <p class="lead">From recorded hour to SAP cost allocation — in one guided flow.</p>
-  <p class="meta">Ticket EP-205 · September 2026</p>
+  <p class="lead">From recorded hour to SAP cost allocation.</p>
+  <p class="meta">September 2026</p>
 </section>
 
 <section class="tt">
@@ -84,18 +84,16 @@
     <div>
       <h4>The business problem</h4>
       <ul>
-        <li>EJOT companies in <b>Germany, Sweden, Poland and the Czech Republic</b> do engineering work for each other.</li>
-        <li>Transfer-pricing rules require these internal services to be <b>charged onward</b> — in SAP CO as activity allocation (transaction <b>KB21N</b>).</li>
-        <li>The tool used so far (“GIB”) is free and <b>no longer supported</b>.</li>
+        <li>EJOT companies in four countries do engineering work for each other — these hours must be <b>charged onward in SAP</b>.</li>
+        <li>The tool used so far is <b>no longer supported</b>.</li>
       </ul>
     </div>
     <div>
       <h4>The objective</h4>
       <ul>
-        <li>One application on the EOS platform that covers the <b>whole chain</b>: record → release → close the month → post to SAP.</li>
+        <li><b>One application</b> for the whole chain: record → release → close the month → post to SAP.</li>
         <li><b>Hours only, never money</b> — rates stay in SAP.</li>
-        <li>Non-chargeable time (vacation, sickness, meetings, training) is recorded too, but never charged.</li>
-        <li>Measurable target: <b>response rate ≥ 80 %</b> before a month can be closed.</li>
+        <li>Target: <b>response rate ≥ 80 %</b> before a month is closed.</li>
       </ul>
     </div>
   </div>
@@ -104,26 +102,26 @@
 
 <section class="tt">
   <p class="kicker">01 · Time Tracking · Starting point &amp; approach</p>
-  <h2>From a one-page scaffold to a complete flow</h2>
+  <h2>From business process to working application</h2>
   <div class="cols">
     <div>
       <h4>Starting point</h4>
       <ul>
-        <li>A generated app scaffold with <b>a single page</b>.</li>
-        <li>No screens, no data model, no written process description.</li>
+        <li>A clear business need and a <b>fresh application shell</b> on the platform.</li>
+        <li>A process well known to the business, <b>ready to be captured in one system</b>.</li>
       </ul>
     </div>
     <div>
       <h4>My approach</h4>
       <ul>
-        <li><b>Understand the process first</b> — roles, hand-overs and rules.</li>
-        <li><b>Make it clickable early</b> so the business can react to real screens.</li>
-        <li><b>Refine for usability</b> — then document it.</li>
-        <li><b>Harden afterwards</b> — backend and permissions as a second phase.</li>
+        <li><b>Understand</b> — map roles, hand-overs and rules.</li>
+        <li><b>Visualise</b> — a clickable prototype for early feedback.</li>
+        <li><b>Refine</b> — improve usability and document the application.</li>
+        <li><b>Harden</b> — backend and permissions as the second phase.</li>
       </ul>
     </div>
   </div>
-  <aside class="notes">I deliberately started with a clickable prototype on realistic sample data. That let us discuss the process with real screens within days instead of weeks. The backend followed as a second phase and is currently in review.</aside>
+  <aside class="notes">I started from the process, not from the screens. A clickable prototype on realistic sample data let us discuss the process within days instead of weeks. The backend followed as a second phase.</aside>
 </section>
 
 <section class="tt">
@@ -262,28 +260,28 @@
     <div>
       <h4 class="ok">Delivered</h4>
       <ul>
-        <li>Complete, clickable end-to-end flow for all four roles, merged in the platform repository.</li>
-        <li>Application Guide and Backend Integration guide.</li>
+        <li><b>End-to-end flow for all four roles</b>, available on the platform.</li>
+        <li><b>Application Guide</b> and <b>Backend Integration guide</b>.</li>
       </ul>
     </div>
     <div>
-      <h4 class="warn">Status</h4>
+      <h4>Status</h4>
       <ul>
-        <li>The merged application is a <b>frontend prototype on sample data</b>.</li>
-        <li>The backend is <b>built and in review</b>, not yet merged.</li>
-        <li>No real SAP interface yet; no automated tests yet.</li>
+        <li><b>Frontend complete</b> — runs on sample data for validation.</li>
+        <li><b>Backend implemented</b> — API, service, database and permission model; merge is the next step.</li>
+        <li><b>SAP posting simulated</b> — interface to be agreed with CO.</li>
       </ul>
     </div>
     <div>
       <h4>Next steps</h4>
       <ul>
-        <li>Close the review, merge the backend, connect the screens to it.</li>
+        <li>Merge the backend and connect the screens to it.</li>
         <li>Agree the SAP interface (CSV / KB21N) with CO.</li>
+        <li>Add automated tests.</li>
       </ul>
     </div>
   </div>
-  <p class="footnote">App scaffold, platform shell, build toolchain and CI pipeline were provided by the platform team.</p>
-  <aside class="notes">I prefer to say this plainly: what you saw is a prototype that proves the process. The backend work exists and is under review. The next decision we need is the SAP interface.</aside>
+  <aside class="notes">The process is proven end to end on the screens. The backend is implemented and will be merged next; after that the screens are connected to it. The next decision we need together with CO is the SAP interface.</aside>
 </section>
 
 <!-- ============================== 02 TASK MANAGEMENT ============================== -->
