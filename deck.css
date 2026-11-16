@@ -107,6 +107,11 @@ html, body { background: var(--bg); }
 .reveal .panel.own { border-color: color-mix(in srgb, var(--accent) 55%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent), 0 20px 50px rgba(0, 0, 0, .35); }
 .reveal .panel h4 { color: var(--text); text-transform: none; letter-spacing: 0; font-size: 23px; margin-bottom: 16px; }
 .reveal ul.tight li { margin-bottom: 7px; font-size: 22px; }
+.reveal ul.big { max-width: 1080px; }
+.reveal ul.big li { font-size: 29px; margin-bottom: 20px; }
+.reveal ol.timeline.wide { max-width: 1120px; margin-left: 8px; }
+.reveal ol.timeline.wide li { font-size: 24px; margin-bottom: 26px; }
+.reveal ol.timeline.wide li::before { top: 9px; }
 
 /* agenda arc */
 .reveal .arc { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }

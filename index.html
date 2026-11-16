@@ -295,56 +295,28 @@
 </section>
 
 <section class="tm">
-  <p class="kicker">02 · Task Management · Objective &amp; starting point</p>
-  <h2>Turn a working baseline into a tool people use every day</h2>
-  <div class="cols">
-    <div>
-      <h4>The objective</h4>
-      <ul>
-        <li>Every platform user gets <b>one place for their work</b>: a personal backlog, private kanban boards and shared team boards.</li>
-        <li>Fast enough to replace sticky notes and spreadsheets — capture in seconds, plan the day, never miss a due date.</li>
-      </ul>
-      <h4>Where I started</h4>
-      <ul>
-        <li>A <b>working first version built by colleagues</b>: My Work, backlog, simple boards, markdown editor, attachments.</li>
-        <li>I joined in October with a list of <b>13 tickets</b> to close functional gaps.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>What was asked (tickets)</h4>
-      <div class="ticketgrid">
-        <span>Task notes</span><span>Search, filters, favourites</span><span>Drag &amp; drop positions</span><span>Autosave &amp; save status</span>
-        <span>Formatting toolbar</span><span>Archive</span><span>Column sorting</span><span>Smart date recognition</span>
-        <span>Recurring tasks</span><span>Drag &amp; drop attachments</span><span>Pinned task input</span><span>Layout fixes</span><span>Simplified assignment</span>
-      </div>
-      <p class="small mt">Each ticket = a small, reviewed pull request — frontend and, where needed, backend.</p>
-    </div>
-  </div>
+  <p class="kicker">02 · Task Management · Objective</p>
+  <h2>One place for everyday work</h2>
+  <h4>The objective</h4>
+  <ul class="big">
+    <li>Every platform user gets <b>one place for their work</b>.</li>
+    <li>A personal backlog, private kanban boards and shared team boards.</li>
+    <li>Fast enough to replace sticky notes and spreadsheets — <b>capture in seconds, plan the day, never miss a due date</b>.</li>
+  </ul>
   <aside class="notes">Important for fairness: I did not start this application. Colleagues built the first version. My job was to make it complete and pleasant enough for daily use.</aside>
 </section>
 
 <section class="tm">
   <p class="kicker">02 · Task Management · Approach</p>
-  <h2>Small steps, shipped continuously — 5 to 22 October</h2>
-  <div class="cols wide-left">
-    <ol class="timeline">
-      <li><time>Week 1</time><b>Foundations:</b> task notes, drag &amp; drop with exact position (incl. backend regression test), search, filters, favourites.</li>
-      <li><time>Week 2</time><b>Editing comfort:</b> autosave with visible status, formatting toolbar and shortcuts, archive, per-column sorting, Due page, smart dates in English and German.</li>
-      <li><time>Week 2–3</time><b>Power features:</b> recurring tasks, drag &amp; drop attachments — then my own additions: quick capture, Today view, dashboard, bulk actions, reusable tags.</li>
-      <li><time>21–22 Oct</time><b>Collaboration:</b> team boards with members, activity log, assignment and due-today notifications.</li>
-    </ol>
-    <div>
-      <h4>How I worked</h4>
-      <ul>
-        <li><b>One ticket, one pull request</b> — easy to review, easy to roll back.</li>
-        <li><b>Full stack:</b> React frontend, Go service, database migrations, API contract.</li>
-        <li><b>Tests with the feature:</b> 60 frontend test cases and 25 Go tests.</li>
-        <li><b>Reviewed by colleagues</b> before merge.</li>
-      </ul>
-      <div class="statrow two"><div><b>22</b><span>frontend PRs merged</span></div><div><b>7</b><span>backend PRs merged</span></div></div>
-    </div>
-  </div>
-  <aside class="notes">My working rhythm here was roughly a merged pull request per working day, always with review. That keeps risk low and progress visible.</aside>
+  <h2>Small steps, shipped continuously</h2>
+  <h4>Progress</h4>
+  <ol class="timeline wide">
+    <li><b>Foundations:</b> task notes, drag &amp; drop with exact position, search, filters, favourites.</li>
+    <li><b>Editing comfort:</b> autosave with visible status, formatting toolbar and shortcuts, archive, per-column sorting, Due page, smart dates in English and German.</li>
+    <li><b>Power features:</b> recurring tasks, drag &amp; drop attachments — then my own additions: quick capture, Today view, dashboard, bulk actions, reusable tags.</li>
+    <li><b>Collaboration:</b> team boards with members, activity log, assignment and due-today notifications.</li>
+  </ol>
+  <aside class="notes">I worked in small, reviewed steps: first the foundations, then editing comfort, then the power features and finally collaboration. That keeps risk low and progress visible.</aside>
 </section>
 
 <section class="tm">
@@ -494,37 +466,22 @@
 </section>
 
 <section class="tm">
-  <p class="kicker">02 · Task Management · Status &amp; next steps</p>
-  <h2>Where Task Management stands today</h2>
+  <p class="kicker">02 · Task Management · Delivered</p>
+  <h2>What Task Management delivers today</h2>
+  <h4 class="ok">Delivered</h4>
   <div class="cols">
-    <div>
-      <div class="statrow">
-        <div><b>29</b><span>PRs merged</span></div>
-        <div><b>+12,088</b><span>lines added (frontend + backend)</span></div>
-        <div><b>85</b><span>tests written</span></div>
-        <div><b>6</b><span>database migrations</span></div>
-      </div>
-      <h4 class="ok">Delivered</h4>
-      <ul>
-        <li>All 13 tickets merged, plus the additions shown.</li>
-        <li>Real backend: Go service, PostgreSQL, permission checks, notifications.</li>
-        <li>3 new API operations (favourites, activity log, user lookup).</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="warn">Honest status</h4>
-      <ul>
-        <li>User interface is <b>English only</b> so far.</li>
-        <li>Release v0.2.0 is prepared; the release pull requests are still open.</li>
-        <li>Backend test coverage is still low overall (notifications package: 70 %).</li>
-      </ul>
-      <h4>Next steps</h4>
-      <ul>
-        <li>Ship v0.2.0, add German translation.</li>
-        <li>Raise test coverage on the core service.</li>
-        <li>Collect feedback from the first teams using team boards.</li>
-      </ul>
-    </div>
+    <ul>
+      <li><b>Task notes</b> with formatting toolbar and autosave.</li>
+      <li><b>Search, filters, favourites</b> and column sorting.</li>
+      <li><b>Drag &amp; drop</b> for tasks and attachments.</li>
+      <li><b>Smart date recognition</b>, recurring tasks and archive.</li>
+    </ul>
+    <ul>
+      <li><b>Quick capture</b>, Today view and dashboard.</li>
+      <li><b>Bulk actions</b>, reusable tags and editable checklists.</li>
+      <li><b>Team boards</b> with members and activity log.</li>
+      <li><b>Notifications</b> for assignments and tasks due today.</li>
+    </ul>
   </div>
   <p class="footnote">The original baseline (My Work, first boards, markdown editor, wiki links and graph view), the app scaffold and the CI pipeline were built by colleagues; pull requests were reviewed by colleagues.</p>
 </section>
@@ -709,14 +666,8 @@
 <section class="rm">
   <p class="kicker">03 · Risk Management · Status &amp; next steps</p>
   <h2>Where Risk Management stands today</h2>
-  <div class="cols">
+  <div class="cols three">
     <div>
-      <div class="statrow">
-        <div><b>82</b><span>API operations in the contract</span></div>
-        <div><b>14</b><span>screens, 17 routes</span></div>
-        <div><b>+20,013</b><span>lines in the prototype PR</span></div>
-        <div><b>2</b><span>PRs merged (5 Nov)</span></div>
-      </div>
       <h4 class="ok">Delivered</h4>
       <ul>
         <li>Design documents: architecture, solution overview, delivery backlog.</li>
@@ -725,12 +676,14 @@
       </ul>
     </div>
     <div>
-      <h4 class="warn">Honest status</h4>
+      <h4 class="warn">Status</h4>
       <ul>
         <li>This is a <b>prototype for validation</b> — clearly labelled “Prototype data”.</li>
         <li>The backend service is a scaffold; exports, uploads and sending are simulated.</li>
         <li>English texts only so far; no automated tests yet; review comments on the prototype PR still to be worked off.</li>
       </ul>
+    </div>
+    <div>
       <h4>Next steps</h4>
       <ul>
         <li>Stakeholder walkthrough with the prototype → confirm scope.</li>
