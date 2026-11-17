@@ -16,20 +16,21 @@
 <!-- ============================== OPENING ============================== -->
 <section class="title-slide">
   <p class="kicker">Work showcase · November 2026</p>
-  <h1>Three products.<br><span class="grad">One platform.</span></h1>
-  <p class="lead">Time Tracking · Task Management · Risk Management<br>What was asked, how I approached it, what I delivered — and what I added on top.</p>
+  <h1>Three products.<br>One release process.<br><span class="grad">One platform.</span></h1>
+  <p class="lead">Time Tracking · Task Management · Risk Management · Versioning &amp; Releases<br>What was asked, how I approached it, what I delivered — and what I added on top.</p>
   <div class="chips">
     <span class="chip c-tt">01 Time Tracking</span>
     <span class="chip c-tm">02 Task Management</span>
     <span class="chip c-rm">03 Risk Management</span>
+    <span class="chip c-cs">04 Versioning &amp; Releases</span>
   </div>
   <p class="byline">Presented by <b>Fatima</b> · EJOT Engineering Platform (EOS)</p>
-  <aside class="notes">Welcome. In the next 20–25 minutes I will walk you through three products I worked on for our platform since September. Same structure each time: objective, starting point, approach, delivery, my own additions, honest status.</aside>
+  <aside class="notes">Welcome. In the next 20–25 minutes I will walk you through three products I worked on for our platform since September — and one platform-wide topic underneath all of them: versioning and releases. Same structure each time: objective, starting point, approach, delivery, my own additions, honest status.</aside>
 </section>
 
 <section>
   <p class="kicker">Agenda</p>
-  <h2>Three projects, one clear storyline</h2>
+  <h2>Three products, one release process — one clear storyline</h2>
   <div class="arc">
     <div class="arc-step"><span>1</span><b>Objective</b><em>Which business problem are we solving?</em></div>
     <div class="arc-step"><span>2</span><b>Starting point</b><em>What was asked, what already existed?</em></div>
@@ -38,17 +39,18 @@
     <div class="arc-step"><span>5</span><b>Beyond the brief</b><em>UX ideas I added myself</em></div>
     <div class="arc-step"><span>6</span><b>Status &amp; next</b><em>Where it stands today — plainly</em></div>
   </div>
-  <div class="cards three mt">
+  <div class="cards four mt">
     <div class="card c-tt"><h3>01 · Time Tracking</h3><p>Cross-company engineering hours, from recording to SAP cost allocation.</p><p class="when">September 2026</p></div>
     <div class="card c-tm"><h3>02 · Task Management</h3><p>Personal backlog, kanban boards and team boards for every platform user.</p><p class="when">October 2026</p></div>
     <div class="card c-rm"><h3>03 · Risk Management</h3><p>IT/OT risks, measures, approvals and the IT Risk Board in one governed flow.</p><p class="when">November 2026</p></div>
+    <div class="card c-cs"><h3>04 · Versioning &amp; Releases</h3><p>One release process for all applications on the platform.</p><p class="when">Platform-wide</p></div>
   </div>
-  <aside class="notes">Every chapter follows the same six steps, so you can compare the three projects easily. All screenshots are taken from the running applications with demo data.</aside>
+  <aside class="notes">Every chapter follows the same six steps, so you can compare the three products easily. The fourth chapter is different: it is the release process that all applications on the platform share. All screenshots are taken from the running applications with demo data.</aside>
 </section>
 
 <section>
   <p class="kicker">At a glance</p>
-  <h2>Three business needs, three solutions</h2>
+  <h2>Three products — and one release process for all of them</h2>
   <div class="cards three">
     <div class="card c-tt big">
       <h3>Time Tracking</h3>
@@ -66,7 +68,8 @@
       <p>Risks, measures, rule-based approvals and the IT Risk Board — designed contract-first and validated with a complete clickable prototype.</p>
     </div>
   </div>
-  <aside class="notes">One sentence per product, in the order I will present them. In each chapter I will be explicit about what is a prototype and what is productive code.</aside>
+  <div class="bar c-cs"><b>Versioning &amp; Releases</b><span>Underneath all of them: one release process for every frontend and service on the platform.</span></div>
+  <aside class="notes">One sentence per product, in the order I will present them — and below them the platform topic that all applications share. In each chapter I will be explicit about what is a prototype and what is productive code.</aside>
 </section>
 
 <!-- ============================== 01 TIME TRACKING ============================== -->
@@ -695,10 +698,108 @@
   <aside class="notes">Again plainly: nothing here is productive yet. What we have is everything needed to decide — a validated process, an agreed contract and a plan with four increments.</aside>
 </section>
 
+<!-- ============================== 04 VERSIONING & RELEASES ============================== -->
+<section class="divider cs">
+  <p class="num">04</p>
+  <h1>Versioning &amp; Releases</h1>
+  <p class="lead">One release process for every application on the EOS platform.</p>
+  <p class="meta">Platform-wide · Changeset CLI</p>
+</section>
+
+<section class="cs">
+  <p class="kicker">04 · Versioning &amp; Releases · Objective</p>
+  <h2>One way to version and release — for all applications</h2>
+  <div class="cols">
+    <div>
+      <h4>The need</h4>
+      <ul>
+        <li>The EOS platform consists of <b>many applications</b>, each in its own repository.</li>
+        <li>Every one of them needs <b>version numbers, a changelog and releases</b>.</li>
+        <li>This should work <b>the same way everywhere</b> — without manual steps.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>The objective</h4>
+      <ul>
+        <li><b>One tool and one process</b> for all frontends and services.</li>
+        <li>Every change <b>describes itself</b> — in one sentence, written by the developer.</li>
+        <li>Version, changelog and release are created <b>automatically</b>.</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">This topic is different from the three products: it is not one application, it is the release process underneath all of them. Whatever is built on EOS is versioned and released this way.</aside>
+</section>
+
+<section class="cs">
+  <p class="kicker">04 · Versioning &amp; Releases · How it works</p>
+  <h2>From a one-line description to a published release</h2>
+  <div class="flow">
+    <div class="flow-step"><span class="role">Developer</span><b>Describes the change</b><em>adds a short changeset: patch, minor or major</em></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="role">Automation</span><b>Checks the request</b><em>a change without a changeset is flagged before merge</em></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="role">Automation</span><b>Prepares the release</b><em>version bump and changelog collected in one release request</em></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="role">Team</span><b>Releases</b><em>merging it creates the version tag and the release notes</em></div>
+  </div>
+  <div class="term"><span class="p">$</span> ejotver add --type minor --message "add team boards"   <span class="c"># describe the change</span>
+<span class="p">$</span> ejotver status                                          <span class="c"># pending changes and the next version</span>
+<span class="p">$</span> ejotver bootstrap                                       <span class="c"># set up a new repository</span></div>
+  <aside class="notes">The developer writes one sentence and picks the type of change. Everything after that is automated: the check on the pull request, the version number, the changelog and the release itself. The team only decides when to release.</aside>
+</section>
+
+<section class="cs">
+  <p class="kicker">04 · Versioning &amp; Releases · In practice</p>
+  <h2>Every change is traceable — by date and by version</h2>
+  <div class="split">
+    <figure class="shot"><img src="img/cs-changelog.png" alt="Published changelog of an application: version, date and changes for every release"></figure>
+    <div class="side">
+      <ul>
+        <li><b>Version, date and changes</b> in one place — for every release.</li>
+        <li>A developer who wants to see <b>what changed last week</b>, or on a specific day, finds it here in seconds.</li>
+        <li>Written <b>automatically</b> with every release — nobody maintains it by hand.</li>
+      </ul>
+      <p class="small">Published changelog of the Demand Management application.</p>
+    </div>
+  </div>
+  <aside class="notes">This is the changelog an application publishes with every release. If a developer wants to track what they did last week, or which change went out on a certain day, it is all here: the date, the version and the change in plain language. Nobody writes this list by hand — it is built from the short descriptions developers add with the changeset tool.</aside>
+</section>
+
+<section class="cs">
+  <p class="kicker">04 · Versioning &amp; Releases · In the platform</p>
+  <h2>Users are told when a new version is ready</h2>
+  <div class="split">
+    <figure class="shot"><img src="img/cs-update.png" alt="Update notice in the platform: a newer build is ready to run"></figure>
+    <div class="side">
+      <ul>
+        <li>The platform compares the <b>released version</b> with the one that is running.</li>
+        <li>When a newer version is deployed, the user sees <b>“Update available”</b> — restart now or later.</li>
+        <li>It runs on the version numbers the release process manages.</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">The same version numbers also reach the user. When a newer version of the platform or of the open application is deployed, a small notice appears and the user decides when to restart.</aside>
+</section>
+
+<section class="cs">
+  <p class="kicker">04 · Versioning &amp; Releases · Delivery</p>
+  <h2>What I delivered — and where it is used</h2>
+  <div class="grid3">
+    <div class="mini"><b>Changeset CLI “ejotver”</b><span>one small command-line tool: add, status, version, release</span></div>
+    <div class="mini"><b>Automatic release preparation</b><span>version bump and changelog are ready after every merge</span></div>
+    <div class="mini"><b>Tag and release notes</b><span>created automatically when the release is approved</span></div>
+    <div class="mini"><b>Changeset check</b><span>changes without a description are flagged before merge</span></div>
+    <div class="mini"><b>One-command setup</b><span>a new repository is prepared with a single command</span></div>
+    <div class="mini"><b>Documentation</b><span>developer guide in the platform docs and on Confluence</span></div>
+  </div>
+  <p class="pillrow"><span class="pill own">Impact</span> Rolled out to <b>77 frontend and service repositories</b> — one release process across the EOS platform.</p>
+  <aside class="notes">The impact here is breadth: this is not tied to one product. Every frontend and service on the platform uses the same tool and the same release flow, including the three applications I just showed.</aside>
+</section>
+
 <!-- ============================== CLOSING ============================== -->
 <section>
   <p class="kicker">Summary</p>
-  <h2>Three projects, three different kinds of contribution</h2>
+  <h2>Three products, one release process — one way of working</h2>
   <div class="cards three">
     <div class="card c-tt big">
       <h3>Time Tracking</h3>
@@ -716,13 +817,14 @@
       <p>Owned architecture, API contract and prototype for a governance-critical module from the first page.</p>
     </div>
   </div>
+  <div class="bar c-cs"><b>Versioning &amp; Releases</b><span><i>Platform contribution</i> — one release process, used by every application on the platform.</span></div>
   <div class="strengths">
     <div><b>I start from the business problem</b><span>roles, rules and hand-overs before screens</span></div>
     <div><b>I make things tangible early</b><span>clickable results within days</span></div>
     <div><b>I think about the user</b><span>and add what makes daily work easier</span></div>
     <div><b>I work transparently</b><span>small reviewed steps, clear status, written documentation</span></div>
   </div>
-  <aside class="notes">If you remember one slide, this one. Three different situations — a new process, an existing product, a blank page — and the same way of working in each.</aside>
+  <aside class="notes">If you remember one slide, this one. Three different situations — a new process, an existing product, a blank page — plus one contribution that serves every application on the platform. And the same way of working in each.</aside>
 </section>
 
 <section>
@@ -739,11 +841,12 @@
 <section class="title-slide">
   <p class="kicker">Discussion</p>
   <h1>Thank you.<br><span class="grad">Questions &amp; feedback</span></h1>
-  <p class="lead">I am happy to go deeper into any screen or decision.</p>
+  <p class="lead">Three products and one platform-wide release process —<br>I am happy to go deeper into any screen or decision.</p>
   <div class="chips">
     <span class="chip c-tt">Time Tracking</span>
     <span class="chip c-tm">Task Management</span>
     <span class="chip c-rm">Risk Management</span>
+    <span class="chip c-cs">Versioning &amp; Releases</span>
   </div>
   <p class="byline"><b>Fatima</b> · EJOT Engineering Platform (EOS)</p>
 </section>
