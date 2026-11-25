@@ -675,27 +675,28 @@
         <li>Design documents: architecture, solution overview, delivery backlog.</li>
         <li>Complete API contract, reviewed and merged.</li>
         <li>Clickable prototype of the whole process with realistic sample data.</li>
+        <li><b>Backend started:</b> configuration and risk register, with the permission model.</li>
       </ul>
     </div>
     <div>
       <h4 class="warn">Status</h4>
       <ul>
-        <li>This is a <b>prototype for validation</b> — clearly labelled “Prototype data”.</li>
-        <li>The backend service is a scaffold; exports, uploads and sending are simulated.</li>
-        <li>English texts only so far; no automated tests yet.</li>
+        <li>The <b>prototype</b> remains the basis for validation — clearly labelled “Prototype data”.</li>
+        <li><b>Risk register and configuration</b> already work with the real backend; the other areas run on prototype data.</li>
+        <li>English texts only so far; automated tests exist for the backend, not yet for the screens.</li>
       </ul>
     </div>
     <div>
       <h4>Next steps</h4>
       <ul>
         <li>Stakeholder walkthrough with the prototype → confirm scope.</li>
-        <li>Backend in <b>4 increments</b> (my plan: ≈ 4–5 months).</li>
-        <li>German translation and test automation alongside.</li>
+        <li>Continue the backend in <b>4 increments</b> — the first is in progress.</li>
+        <li>German translation and tests for the screens alongside.</li>
       </ul>
     </div>
   </div>
   <p class="footnote">App scaffold and CI pipeline were provided by the platform team.</p>
-  <aside class="notes">Again plainly: nothing here is productive yet. What we have is everything needed to decide — a validated process, an agreed contract and a plan with four increments.</aside>
+  <aside class="notes">Again plainly: nothing here is productive yet. The process is validated on the prototype, the contract is agreed, and the backend has started — the risk register and the configuration already work on real data. Measures, approvals, the IT Risk Board and reporting follow in the next increments.</aside>
 </section>
 
 <!-- ============================== 04 VERSIONING & RELEASES ============================== -->
@@ -825,6 +826,83 @@
     <div><b>I work transparently</b><span>small reviewed steps, clear status, written documentation</span></div>
   </div>
   <aside class="notes">If you remember one slide, this one. Three different situations — a new process, an existing product, a blank page — plus one contribution that serves every application on the platform. And the same way of working in each.</aside>
+</section>
+
+<section>
+  <p class="kicker">Current status &amp; progress</p>
+  <h2>Where each topic stands today</h2>
+  <div class="cards four">
+    <div class="card c-tt"><h3>Time Tracking</h3><p>All screens for the four roles are complete. The backend is implemented; merging it is the next step. The SAP posting is simulated.</p><p class="when">Screens complete · backend to merge</p></div>
+    <div class="card c-tm"><h3>Task Management</h3><p>The requested features and my own additions are delivered, in frontend and backend.</p><p class="when">Delivered</p></div>
+    <div class="card c-rm"><h3>Risk Management</h3><p>Design, API contract and prototype are complete. The backend has started: configuration and risk register work on real data.</p><p class="when">Prototype complete · backend started</p></div>
+    <div class="card c-cs"><h3>Versioning &amp; Releases</h3><p>In use: one release process, rolled out to 77 frontend and service repositories.</p><p class="when">In use platform-wide</p></div>
+  </div>
+  <aside class="notes">One line per topic. Task Management and the release process are delivered. Time Tracking is complete on the screens and waits for the backend merge. Risk Management has moved from prototype into the first backend increment.</aside>
+</section>
+
+<section>
+  <p class="kicker">What works well · Current challenges</p>
+  <h2>What is working well — and what is still open</h2>
+  <div class="cols">
+    <div>
+      <h4 class="ok">Working particularly well</h4>
+      <ul>
+        <li><b>Clickable prototypes early</b> — the process is discussed on real screens before the backend is built.</li>
+        <li><b>Contract first</b> — in Risk Management, screens and backend are built against one agreed API.</li>
+        <li><b>Small, reviewed steps</b> — Task Management was delivered feature by feature.</li>
+        <li><b>One release process</b> — versions and changelogs are created automatically.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="warn">Current challenges and blockers</h4>
+      <ul>
+        <li><b>SAP interface</b> — the posting format is still to be agreed with CO; until then it stays simulated.</li>
+        <li><b>Time Tracking backend</b> — the merge is pending; until then the screens run on sample data.</li>
+        <li><b>Risk Management backend</b> — most of it is still to be built; the scope is to be confirmed with the stakeholders.</li>
+        <li><b>Tests and languages</b> — automated tests for the screens and German texts for Risk Management are still to come.</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">What works well is the way of working: show it early, agree the contract, deliver in small steps, release automatically. The open points are concrete: one decision with CO on the SAP interface, one pending merge, and the remaining Risk Management backend.</aside>
+</section>
+
+<section>
+  <p class="kicker">Next steps &amp; expectations</p>
+  <h2>What comes next — and what I need for it</h2>
+  <div class="cols">
+    <div>
+      <h4>Next steps</h4>
+      <ul>
+        <li><b>Time Tracking:</b> merge the backend, connect the screens, agree the SAP interface.</li>
+        <li><b>Task Management:</b> collect user feedback and prioritise improvements.</li>
+        <li><b>Risk Management:</b> confirm the scope with the stakeholders and continue the backend.</li>
+        <li><b>Versioning &amp; Releases:</b> support the teams and keep the guide up to date.</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What I need to move forward</h4>
+      <ul>
+        <li>A <b>decision on the SAP interface</b>, together with CO.</li>
+        <li><b>Review and merge</b> of the Time Tracking backend.</li>
+        <li><b>Time with the stakeholders</b> for the Risk Management walkthrough.</li>
+        <li><b>Your priorities</b> across the four topics.</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">The next steps are clear for each topic. What I need from this round are three things: the SAP interface decision, the backend review for Time Tracking, and stakeholder time for Risk Management — plus your view on priorities.</aside>
+</section>
+
+<section>
+  <p class="kicker">Learnings</p>
+  <h2>My most important learnings</h2>
+  <ul class="big">
+    <li><b>Understand the process first.</b> Roles, rules and hand-overs decide the design — the screens follow.</li>
+    <li><b>Show it early.</b> A clickable prototype gets clearer feedback than a description.</li>
+    <li><b>Agree the contract before building.</b> It gives screens and backend one common basis.</li>
+    <li><b>A tool for everyone has to be simple.</b> One command to set up and one short guide.</li>
+    <li><b>Be plain about status.</b> Say what is finished, what is simulated and what is open.</li>
+  </ul>
+  <aside class="notes">Five learnings, one from each situation: the finance process in Time Tracking, the prototypes, the Risk Management contract, the platform-wide release tool — and, across all of them, being clear about what is done and what is not.</aside>
 </section>
 
 <section>
