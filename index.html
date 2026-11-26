@@ -11,922 +11,645 @@
 </head>
 <body>
 <div class="reveal">
+
+<!-- EJOT master slide: red bar, claim, logo, footer line. The footer centre is the chapter navigation. -->
+<div class="frame">
+  <div class="f-bar"></div>
+  <p class="f-claim">EJOT. Bringing it together.</p>
+  <img class="f-logo" src="img/ejot-logo.svg" alt="EJOT">
+  <div class="f-foot">
+    <p class="f-left"><b>EJOT Business Services India</b>Work showcase</p>
+    <nav class="f-nav" aria-label="Chapters">
+      <a href="#/tt" data-ch="tt" class="c-tt"><span class="n"><b>1</b></span>Time Tracking<span class="tip"><kbd>1</kbd><b>Time Tracking</b><em>Hours in. SAP postings out.</em><span class="st hold">On hold</span></span></a>
+      <a href="#/tm" data-ch="tm" class="c-tm"><span class="n"><b>2</b></span>Task Management<span class="tip"><kbd>2</kbd><b>Task Management</b><em>Capture, plan, done.</em><span class="st done">Delivered · In use</span></span></a>
+      <a href="#/rm" data-ch="rm" class="c-rm"><span class="n"><b>3</b></span>Risk Management<span class="tip"><kbd>3</kbd><b>Risk Management</b><em>From spreadsheets to an audit trail.</em><span class="st prog">In progress</span></span></a>
+      <a href="#/rel" data-ch="rel" class="c-rel"><span class="n"><b>4</b></span>Releases<span class="tip"><kbd>4</kbd><b>Versioning &amp; Releases</b><em>One tool. Every repo.</em><span class="st done">Delivered · In use</span></span></a>
+      <a href="#/status" data-ch="end" class="c-end"><span class="n s"><b></b></span>Status<span class="tip"><kbd>5</kbd><b>Status board</b><em>Where everything stands.</em></span></a>
+    </nav>
+    <p class="f-right">Confidential</p>
+  </div>
+</div>
+
 <div class="slides">
 
 <!-- ============================== OPENING ============================== -->
-<section class="title-slide">
-  <p class="kicker">Work showcase · November 2026</p>
-  <h1>Three products.<br>One release process.<br><span class="grad">One platform.</span></h1>
-  <p class="lead">Time Tracking · Task Management · Risk Management · Versioning &amp; Releases<br>What was asked, how I approached it, what I delivered — and what I added on top.</p>
+<section class="title-slide" data-ch="start">
+  <p class="kicker brand">Work showcase · November 2026</p>
+  <h1>Three products.<br>One release process.<br><span class="brand">One platform.</span></h1>
+  <p class="lead">What I built, where it stands, what comes next.</p>
   <div class="chips">
-    <span class="chip c-tt">01 Time Tracking</span>
-    <span class="chip c-tm">02 Task Management</span>
-    <span class="chip c-rm">03 Risk Management</span>
-    <span class="chip c-cs">04 Versioning &amp; Releases</span>
+    <a class="chip c-tt" href="#/tt">01 Time Tracking</a>
+    <a class="chip c-tm" href="#/tm">02 Task Management</a>
+    <a class="chip c-rm" href="#/rm">03 Risk Management</a>
+    <a class="chip c-rel" href="#/rel">04 Versioning &amp; Releases</a>
   </div>
-  <p class="byline">Presented by <b>Fatima</b> · EJOT Engineering Platform (EOS)</p>
+  <p class="byline">Presented by <b>Midhat</b> · EJOT Engineering Platform (EOS)</p>
+  <div class="collage" data-stagger>
+    <img src="img/tt-dashboard.png" alt="">
+    <img src="img/tm-board.png" alt="">
+    <img src="img/rm-dashboard.png" alt="">
+  </div>
   <aside class="notes">Welcome. In the next 20–25 minutes I will walk you through three products I worked on for our platform since September — and one platform-wide topic underneath all of them: versioning and releases. Same structure each time: objective, starting point, approach, delivery, my own additions, honest status.</aside>
 </section>
 
-<section>
-  <p class="kicker">Agenda</p>
-  <h2>Three products, one release process — one clear storyline</h2>
-  <div class="arc">
-    <div class="arc-step"><span>1</span><b>Objective</b><em>Which business problem are we solving?</em></div>
-    <div class="arc-step"><span>2</span><b>Starting point</b><em>What was asked, what already existed?</em></div>
-    <div class="arc-step"><span>3</span><b>Approach</b><em>How I proceeded, step by step</em></div>
-    <div class="arc-step"><span>4</span><b>Delivery</b><em>Live screens of what is built</em></div>
-    <div class="arc-step"><span>5</span><b>Beyond the brief</b><em>UX ideas I added myself</em></div>
-    <div class="arc-step"><span>6</span><b>Status &amp; next</b><em>Where it stands today — plainly</em></div>
+<section data-ch="start">
+  <p class="kicker brand">Work showcase</p>
+  <h2>Agenda</h2>
+  <div class="agenda" data-stagger>
+    <div><span>1</span><b>Objective</b><em>Which business problem are we solving?</em></div>
+    <div><span>2</span><b>Starting point</b><em>What was asked, what already existed?</em></div>
+    <div><span>3</span><b>Approach</b><em>How I proceeded, step by step</em></div>
+    <div><span>4</span><b>Delivery</b><em>Live screens of what is built</em></div>
+    <div><span>5</span><b>Beyond the brief</b><em>UX ideas I added myself</em></div>
+    <div><span>6</span><b>Status &amp; next</b><em>Where it stands today — plainly</em></div>
   </div>
-  <div class="cards four mt">
-    <div class="card c-tt"><h3>01 · Time Tracking</h3><p>Cross-company engineering hours, from recording to SAP cost allocation.</p><p class="when">September 2026</p></div>
-    <div class="card c-tm"><h3>02 · Task Management</h3><p>Personal backlog, kanban boards and team boards for every platform user.</p><p class="when">October 2026</p></div>
-    <div class="card c-rm"><h3>03 · Risk Management</h3><p>IT/OT risks, measures, approvals and the IT Risk Board in one governed flow.</p><p class="when">November 2026</p></div>
-    <div class="card c-cs"><h3>04 · Versioning &amp; Releases</h3><p>One release process for all applications on the platform.</p><p class="when">Platform-wide</p></div>
-  </div>
-  <aside class="notes">Every chapter follows the same six steps, so you can compare the three products easily. The fourth chapter is different: it is the release process that all applications on the platform share. All screenshots are taken from the running applications with demo data.</aside>
+  <div class="story chapters-row"><em>Four chapters</em><a class="chip c-tt" href="#/tt">01 Time Tracking</a><a class="chip c-tm" href="#/tm">02 Task Management</a><a class="chip c-rm" href="#/rm">03 Risk Management</a><a class="chip c-rel" href="#/rel">04 Versioning &amp; Releases</a><a class="chip c-end" href="#/wrapup">Wrap-up</a></div>
+  <aside class="notes">Four chapters and a wrap-up. Every chapter follows the same six steps, so you can compare the three products easily: the objective — which business problem are we solving; the starting point — what was asked and what already existed; my approach, step by step; the delivery on live screens; what I added beyond the brief; and the status and next steps — where it stands today, plainly. The fourth chapter is different: it is the release process that all applications on the platform share. All screenshots are taken from the running applications with demo data. Everything here is clickable — and the chapter bar at the bottom of every slide jumps to any chapter at any time, also with the keys 1 to 5.</aside>
 </section>
 
-<section>
-  <p class="kicker">At a glance</p>
-  <h2>Three products — and one release process for all of them</h2>
-  <div class="cards three">
-    <div class="card c-tt big">
-      <h3>Time Tracking</h3>
-      <p class="role-line">From recorded hour to SAP cost allocation</p>
-      <p>Employees record hours, project leads release them, controlling closes the month and posts to SAP — one guided, clickable end-to-end flow.</p>
-    </div>
-    <div class="card c-tm big">
-      <h3>Task Management</h3>
-      <p class="role-line">Personal and team task boards</p>
-      <p>Boards, quick capture, a daily plan, due dates, team boards and notifications — full-stack product work on frontend and backend.</p>
-    </div>
-    <div class="card c-rm big">
-      <h3>Risk Management</h3>
-      <p class="role-line">IT/OT risks in one governed process</p>
-      <p>Risks, measures, rule-based approvals and the IT Risk Board — designed contract-first and validated with a complete clickable prototype.</p>
-    </div>
+<section data-ch="start">
+  <p class="kicker brand">Work showcase</p>
+  <h2>At a glance</h2>
+  <div class="chapters" data-stagger>
+    <a class="chap c-tt" href="#/tt"><span class="art"><svg viewBox="0 0 300 150" aria-hidden="true"><g class="bars" fill="currentColor"><rect x="34" y="64" width="22" height="58" rx="5" opacity=".4"/><rect x="64" y="46" width="22" height="76" rx="5" opacity=".55"/><rect x="94" y="72" width="22" height="50" rx="5" opacity=".4"/><rect x="124" y="38" width="22" height="84" rx="5" opacity=".75"/><rect x="154" y="56" width="22" height="66" rx="5"/></g><rect x="28" y="126" width="154" height="3" rx="1.5" fill="currentColor" opacity=".3"/><path d="M194 82h32m-10-9 10 9-10 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="238" y="61" width="50" height="42" rx="10" fill="currentColor"/><text x="263" y="88" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">SAP</text></svg></span><div><span class="no">01</span><h3>Time Tracking</h3><p>Hours in. SAP postings out.</p><span class="st hold">On hold</span></div></a>
+    <a class="chap c-tm" href="#/tm"><span class="art"><svg viewBox="0 0 300 150" aria-hidden="true"><g fill="#fff"><rect x="30" y="20" width="72" height="110" rx="10"/><rect x="114" y="20" width="72" height="110" rx="10"/><rect x="198" y="20" width="72" height="110" rx="10"/></g><g fill="currentColor"><rect x="38" y="30" width="56" height="22" rx="6" opacity=".3"/><rect x="38" y="58" width="56" height="22" rx="6" opacity=".3"/><rect x="38" y="86" width="56" height="22" rx="6" opacity=".3"/><rect x="122" y="30" width="56" height="22" rx="6" opacity=".6"/><rect x="122" y="58" width="56" height="22" rx="6" opacity=".6"/><rect x="206" y="30" width="56" height="22" rx="6"/></g><path d="M227 41l5 5 9-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><span class="no">02</span><h3>Task Management</h3><p>Capture, plan, done.</p><span class="st done">Delivered · In use</span></div></a>
+    <a class="chap c-rm" href="#/rm"><span class="art"><svg viewBox="0 0 300 150" aria-hidden="true"><g fill="currentColor"><rect x="87" y="22" width="22" height="18" rx="4" opacity="0.45"/><rect x="113" y="22" width="22" height="18" rx="4" opacity="0.58"/><rect x="139" y="22" width="22" height="18" rx="4" opacity="0.71"/><rect x="165" y="22" width="22" height="18" rx="4" opacity="0.85"/><rect x="191" y="22" width="22" height="18" rx="4" opacity="1.00"/><rect x="87" y="44" width="22" height="18" rx="4" opacity="0.34"/><rect x="113" y="44" width="22" height="18" rx="4" opacity="0.45"/><rect x="139" y="44" width="22" height="18" rx="4" opacity="0.58"/><rect x="165" y="44" width="22" height="18" rx="4" opacity="0.71"/><rect x="191" y="44" width="22" height="18" rx="4" opacity="0.85"/><rect x="87" y="66" width="22" height="18" rx="4" opacity="0.25"/><rect x="113" y="66" width="22" height="18" rx="4" opacity="0.34"/><rect x="139" y="66" width="22" height="18" rx="4" opacity="0.45"/><rect x="165" y="66" width="22" height="18" rx="4" opacity="0.58"/><rect x="191" y="66" width="22" height="18" rx="4" opacity="0.71"/><rect x="87" y="88" width="22" height="18" rx="4" opacity="0.17"/><rect x="113" y="88" width="22" height="18" rx="4" opacity="0.25"/><rect x="139" y="88" width="22" height="18" rx="4" opacity="0.34"/><rect x="165" y="88" width="22" height="18" rx="4" opacity="0.45"/><rect x="191" y="88" width="22" height="18" rx="4" opacity="0.58"/><rect x="87" y="110" width="22" height="18" rx="4" opacity="0.12"/><rect x="113" y="110" width="22" height="18" rx="4" opacity="0.17"/><rect x="139" y="110" width="22" height="18" rx="4" opacity="0.25"/><rect x="165" y="110" width="22" height="18" rx="4" opacity="0.34"/><rect x="191" y="110" width="22" height="18" rx="4" opacity="0.45"/></g><path d="M176 53 150 75" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 6"/><circle cx="176" cy="53" r="5.5" fill="none" stroke="#fff" stroke-width="3"/><circle cx="150" cy="75" r="6" fill="#fff"/></svg></span><div><span class="no">03</span><h3>Risk Management</h3><p>From spreadsheets to an audit trail.</p><span class="st prog">In progress</span></div></a>
+    <a class="chap c-rel" href="#/rel"><span class="art"><svg viewBox="0 0 300 150" aria-hidden="true"><path d="M36 84h228" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity=".3"/><g fill="currentColor"><circle cx="70" cy="84" r="8" opacity=".5"/><circle cx="150" cy="84" r="8" opacity=".5"/><circle cx="230" cy="84" r="11"/></g><g font-size="13" font-weight="750" text-anchor="middle"><rect x="38" y="36" width="64" height="26" rx="13" fill="#fff"/><text x="70" y="54" fill="currentColor">v1.2.1</text><rect x="118" y="36" width="64" height="26" rx="13" fill="#fff"/><text x="150" y="54" fill="currentColor">v1.3.0</text><rect x="198" y="36" width="64" height="26" rx="13" fill="currentColor"/><text x="230" y="54" fill="#fff">v2.0.0</text></g><g font-size="12" font-weight="650" text-anchor="middle" fill="currentColor" opacity=".7"><text x="70" y="118">patch</text><text x="150" y="118">minor</text><text x="230" y="118">major</text></g></svg></span><div><span class="no">04</span><h3>Versioning &amp; Releases</h3><p>One tool. Every repo.</p><span class="st done">Delivered · In use</span></div></a>
   </div>
-  <div class="bar c-cs"><b>Versioning &amp; Releases</b><span>Underneath all of them: one release process for every frontend and service on the platform.</span></div>
-  <aside class="notes">One sentence per product, in the order I will present them — and below them the platform topic that all applications share. In each chapter I will be explicit about what is a prototype and what is productive code.</aside>
+  <aside class="notes">One line per product, in the order I will present them — and the platform topic that all applications share. Time Tracking: from recorded hour to SAP cost allocation — employees record hours, project leads release them, controlling closes the month and posts to SAP. Task Management: personal and team task boards — full-stack product work on frontend and backend. Risk Management: IT/OT risks in one governed process — designed contract-first and validated with a complete clickable prototype. Versioning and Releases: one release process for every frontend and service on the platform. One colour code throughout: green is done, orange is in progress, red is not done yet — open, or on hold. In each chapter I will be explicit about what is a prototype and what is productive code.</aside>
 </section>
 
 <!-- ============================== 01 TIME TRACKING ============================== -->
-<section class="divider tt">
+<section class="divider tt" id="tt" data-ch="tt">
   <p class="num">01</p>
   <h1>Time Tracking</h1>
   <p class="lead">From recorded hour to SAP cost allocation.</p>
-  <p class="meta">September 2026</p>
+  <p class="meta"><span class="st hold lg">On hold</span>September 2026</p>
+  <img class="hero" src="img/tt-dashboard.png" alt="">
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Objective</p>
-  <h2>Why this application exists</h2>
-  <div class="cols">
-    <div>
-      <h4>The business problem</h4>
-      <ul>
-        <li>EJOT companies do project work for each other across countries — these hours must be <b>charged onward in SAP</b>.</li>
-        <li>Today these hours are recorded in the <b>GIB tool</b>, which is available <b>in German only</b>.</li>
-        <li>We need a <b>timesheet inside EOS</b> that collects the hours and <b>exports them to SAP</b>.</li>
-        <li>It must support <b>multiple languages</b> for our international teams.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>The objective</h4>
-      <ul>
-        <li><b>One application</b> for the whole chain: record → release → close the month → post to SAP.</li>
-        <li><b>Hours only, never money</b> — rates stay in SAP.</li>
-        <li>Target: <b>response rate ≥ 80 %</b> before a month is closed.</li>
-      </ul>
-    </div>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>Why</h2>
+  <div class="fromto" data-stagger>
+    <div class="panel"><h4>Today</h4><b class="big">GIB tool</b><p>German only. Cross-company project hours are recorded there and charged onward in SAP.</p></div>
+    <div class="arrow">→</div>
+    <div class="panel"><h4>Goal</h4><b class="big">One timesheet inside EOS</b><p>Multi-language, for our international teams — and it exports the hours to SAP.</p></div>
   </div>
-  <aside class="notes">This is a finance-driven topic. The key design rule I kept throughout: the app only handles hours. Money, rates and postings stay in SAP — that keeps the tool simple and audit-friendly.</aside>
+  <aside class="notes">EJOT companies do project work for each other across countries — these hours must be charged onward in SAP. Today they are recorded in the GIB tool, which is available in German only. We need a timesheet inside EOS that collects the hours and exports them to SAP, in multiple languages. This is a finance-driven topic. The key design rule I kept throughout: the app only handles hours. Money, rates and postings stay in SAP — that keeps the tool simple and audit-friendly.</aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Starting point &amp; approach</p>
-  <h2>From business process to working application</h2>
-  <div class="cols">
-    <div>
-      <h4>Starting point</h4>
-      <ul>
-        <li>A clear business need and a <b>fresh application shell</b> on the platform.</li>
-        <li>A process well known to the business, <b>ready to be captured in one system</b>.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>My approach</h4>
-      <ul>
-        <li><b>Understand</b> — map roles, hand-overs and rules.</li>
-        <li><b>Visualise</b> — a clickable prototype for early feedback.</li>
-        <li><b>Refine</b> — improve usability and document the application.</li>
-        <li><b>Harden</b> — backend and permissions as the second phase.</li>
-      </ul>
-    </div>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>Approach</h2>
+  <div class="steps" data-stagger>
+    <div class="step done"><span class="n">Step 1</span><b>Understand</b><em>Roles, hand-overs and rules</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Step 2</span><b>Visualise</b><em>A clickable prototype for early feedback</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Step 3</span><b>Refine</b><em>Usability and documentation</em><span class="st done">Done</span></div>
+    <div class="step hold"><span class="n">Step 4</span><b>Harden</b><em>Backend and permissions</em><span class="st hold">On hold</span></div>
   </div>
-  <aside class="notes">I started from the process, not from the screens. A clickable prototype on realistic sample data let us discuss the process within days instead of weeks. The backend followed as a second phase.</aside>
+  <aside class="notes">The starting point was a clear business need and a fresh application shell on the platform — a process well known to the business, ready to be captured in one system. I started from the process, not from the screens. A clickable prototype on realistic sample data let us discuss the process within days instead of weeks. Then I improved usability and documented the application. The backend followed as a second phase.</aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · The flow</p>
-  <h2>Four roles, one chain — every hand-over is explicit</h2>
-  <div class="flow">
-    <div class="flow-step"><span class="role">Recorder</span><b>Records hours</b><em>guided form, timesheet or live timer; submits the month</em></div>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>The flow</h2>
+  <div class="flow" data-stagger>
+    <div class="flow-step"><span class="role">Recorder</span><b>Records hours</b><em>Form, timesheet or live timer</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">Project lead</span><b>Releases</b><em>approves or returns with a mandatory comment; sees team coverage</em></div>
+    <div class="flow-step"><span class="role">Project lead</span><b>Releases</b><em>Approves — or returns with a comment</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">CO central</span><b>Closes the month</b><em>three plausibility checks must pass; then posting to SAP (KB21N)</em></div>
+    <div class="flow-step"><span class="role">CO central</span><b>Closes the month</b><em>Three checks, then SAP (KB21N)</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">Administrator</span><b>Keeps it running</b><em>projects, distribution keys, master data, permissions</em></div>
+    <div class="flow-step"><span class="role">Administrator</span><b>Keeps it running</b><em>Projects, keys, permissions</em></div>
   </div>
-  <aside class="notes">Four roles, each with a clear hand-over to the next. I will now show each role's view in the order the process runs.</aside>
+  <aside class="notes">Four roles, each with a clear hand-over to the next. The recorder uses a guided form, a timesheet or a live timer and submits the month. The project lead approves or returns with a mandatory comment and sees the team coverage. CO central closes the month — three plausibility checks must pass — and then posts to SAP (KB21N). The administrator maintains projects, distribution keys, master data and permissions. I will now show each role's view in the order the process runs.</aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · Recorder</p>
-  <h2>Dashboard — my month at a glance</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tt-dashboard.png" alt="Time Tracking dashboard"></figure>
-    <div class="side">
-      <ul>
-        <li>Hours this month, open drafts, response rate against the 80 % target.</li>
-        <li>Hours by project and recent activity with status.</li>
-        <li>One click to “Record hours”.</li>
-        <li>The role switcher at the top right changes navigation and landing page per role.</li>
-      </ul>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>Recorder</h2>
+  <div class="explorer roomy">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Dashboard</span><span class="tab">Guided form</span><span class="tab">Timesheet</span><span class="tab own">My entries</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/tt-dashboard.png" alt="Time Tracking dashboard"></figure>
+        <div class="say" data-stagger><h3>My month at a glance</h3><ul><li class="nw">Hours, drafts and <b>response rate vs 80 %</b></li><li>Hours by project</li><li><b>One click</b> to record</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-recording.png" alt="Guided recording form"></figure>
+        <div class="say" data-stagger><h3>Guided, step by step</h3><ul><li>Project → sub-project → task</li><li>Manual hours or a <b>live timer</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-timesheet.png" alt="Timesheet view"></figure>
+        <div class="say" data-stagger><h3>A whole week in one go</h3><ul><li><b>SAP-style</b> bulk entry</li><li><b>Copy last week</b></li><li>Recording generator</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-myreports.png" alt="My entries"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>Mistakes show up at once</h3><ul><li><b>Missing days</b> are flagged</li><li>Days over <b>24 h</b> are flagged</li><li>Click a day to record it</li></ul></div></div>
     </div>
   </div>
-  <aside class="notes">Every role lands on a dashboard that answers one question: what do I need to do now?</aside>
+  <aside class="notes"><p><b>Dashboard:</b> Every role lands on a dashboard that answers one question: what do I need to do now? Hours this month, open drafts, response rate against the 80 % target, hours by project and recent activity with status. The role switcher at the top right changes navigation and landing page per role.</p><p><b>Guided form and timesheet:</b> Different people record differently. Occasional users get a guided form, power users get a timesheet that feels like SAP — with “Copy last week”, duplicate row and a recording generator — and people who work on one thing at a time can simply run a timer, with “edit before saving”. The timesheet view and these helpers were my own initiative.</p><p><b>My entries:</b> Health banners show working days without an entry and implausible days with more than 24 hours. The weekly grid runs against the 8 h daily target — click a day to record it. Filter by status, correct drafts, submit the month for release. Weekly grid, health banners and calendar-click prefill were not requested — they prevent corrections at month end. The sample data contains an implausible entry, so you can see the validation: the system flags it before it ever reaches the project lead.</p></aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · Recorder</p>
-  <h2>Recording — three ways to enter time</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/tt-recording.png" alt="Guided recording form"><figcaption><b>Guided form</b> — project → sub-project → task, manual hours or live timer</figcaption></figure>
-    <figure class="shot"><img src="img/tt-timesheet.png" alt="Timesheet view"><figcaption><b>Timesheet</b> — SAP-style bulk entry with task tree, “Copy last week” and a recording generator</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">Own initiative</span> Timesheet view, copy last week, duplicate row, recording generator, timer with “edit before saving”</p>
-  <aside class="notes">Different people record differently. Occasional users get a guided form, power users get a timesheet that feels like SAP, and people who work on one thing at a time can simply run a timer.</aside>
-</section>
-
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · Recorder</p>
-  <h2>My entries — gaps and mistakes become visible immediately</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tt-myreports.png" alt="My entries"></figure>
-    <div class="side">
-      <ul>
-        <li><b>Health banners:</b> working days without an entry, implausible days (more than 24 h).</li>
-        <li><b>Weekly grid</b> against the 8 h daily target — click a day to record it.</li>
-        <li>Filter by status, correct drafts, submit the month for release.</li>
-      </ul>
-      <p class="pill own">Own initiative</p>
-      <p class="small">Weekly grid, health banners and calendar-click prefill were not requested — they prevent corrections at month end.</p>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>Project lead</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab own">Team status</span><span class="tab own">Release</span><span class="tab">Utilisation</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/tt-teamstatus.png" alt="Team status"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>Who is missing?</h3><ul><li>Coverage per <b>person and day</b></li><li><b>One-click</b> reminder</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-release.png" alt="Release queue"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>Many entries, one action</h3><ul><li>Grouped by recorder or project</li><li>Searchable</li><li>Returning <b>needs a comment</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-utilization.png" alt="Project utilisation"></figure>
+        <div class="say" data-stagger><h3>Planned vs recorded</h3><ul><li>Planned, recorded, remaining hours</li><li><b>Traffic light</b> — near limit from 85 %</li><li>Awaiting release shown separately</li></ul></div></div>
     </div>
   </div>
-  <aside class="notes">The sample data contains an implausible entry, so you can see the validation: the system flags it before it ever reaches the project lead.</aside>
+  <aside class="notes"><p><b>Team status and release:</b> The project lead is the bottleneck in every approval process. So I gave them two things: visibility of who is missing, and a release queue that handles many entries in one action. Team status page, coverage strips, reminder nudges with notification bell and the grouped, searchable release queue were my own initiative. Returning an entry requires a comment.</p><p><b>Utilisation:</b> Planned, recorded and remaining hours per project. Traffic-light status: on track, near limit (from 85 %), over budget. Hours still awaiting release are shown separately — they are not yet counted.</p></aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · Project lead</p>
-  <h2>Team status and release</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/tt-teamstatus.png" alt="Team status"><figcaption><b>Team status</b> — coverage per person and day, one-click reminder</figcaption></figure>
-    <figure class="shot"><img src="img/tt-release.png" alt="Release queue"><figcaption><b>Release</b> — grouped by recorder or project, searchable; returning requires a comment</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">Own initiative</span> Team status page, coverage strips, reminder nudges with notification bell, grouped &amp; searchable release queue</p>
-  <aside class="notes">The project lead is the bottleneck in every approval process. So I gave them two things: visibility of who is missing, and a release queue that handles many entries in one action.</aside>
-</section>
-
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · Project lead</p>
-  <h2>Project utilisation — planned versus recorded effort</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tt-utilization.png" alt="Project utilisation"></figure>
-    <div class="side">
-      <ul>
-        <li>Planned, recorded and remaining hours per project.</li>
-        <li>Traffic-light status: on track, near limit (from 85 %), over budget.</li>
-        <li>Hours still awaiting release are shown separately — they are not yet counted.</li>
-      </ul>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking · CO central &amp; administrator</p>
+  <h2>Close the month. Post to SAP.</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Month-end close</span><span class="tab">SAP posting</span><span class="tab">Permissions</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/tt-close.png" alt="Month-end close"></figure>
+        <div class="say" data-stagger><h3>The control point</h3><ul><li>Closes only when <b>three checks</b> pass</li><li>Response rate, drafts, releases</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-sap.png" alt="SAP posting"></figure>
+        <div class="say" data-stagger><p class="st todo">Simulated · interface open</p><h3>Hours become posting lines</h3><ul><li>KB21N: sender relieved, receiver charged</li><li>Real SAP interface comes with the backend</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tt-permissions.png" alt="People and permissions"></figure>
+        <div class="say" data-stagger><h3>Named users only</h3><ul><li>Booking only on <b>authorised projects</b></li></ul></div></div>
     </div>
   </div>
+  <aside class="notes"><p><b>Month-end close and SAP posting:</b> This is the control point for finance. The period can only be closed when all three plausibility checks pass — nothing goes towards SAP unless response rate, drafts and releases are clean. Released hours become posting lines: sender relieved, receiver charged. I want to be clear: the posting itself is simulated today; the real SAP interface is part of the backend phase.</p><p><b>Permissions:</b> Named users may book only on authorised projects. Also delivered, not shown here: reports with the allocation by receiving company and project, distribution keys (shares per company, must total 100 %), a monthly overview with charts, the project structure (project → sub-project → task) and SAP master data views.</p></aside>
 </section>
 
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · CO central</p>
-  <h2>Month-end close and SAP posting</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/tt-close.png" alt="Month-end close"><figcaption><b>Month-end close</b> — the period can only be closed when all three plausibility checks pass</figcaption></figure>
-    <figure class="shot"><img src="img/tt-sap.png" alt="SAP posting"><figcaption><b>SAP posting (KB21N)</b> — released hours become posting lines: sender relieved, receiver charged</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill proto">Prototype</span> The posting run is simulated in the prototype; the real SAP interface is part of the backend phase.</p>
-  <aside class="notes">This is the control point for finance. Nothing goes towards SAP unless response rate, drafts and releases are clean. I want to be clear: the posting itself is simulated today.</aside>
-</section>
-
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Delivery · CO central &amp; Administrator</p>
-  <h2>Reports, distribution keys and permissions</h2>
-  <div class="trio">
-    <figure class="shot"><img src="img/tt-reports.png" alt="Reports"><figcaption><b>Reports</b> — allocation by receiving company and project</figcaption></figure>
-    <figure class="shot"><img src="img/tt-keys.png" alt="Distribution keys"><figcaption><b>Distribution keys</b> — shares per company, must total 100 %</figcaption></figure>
-    <figure class="shot"><img src="img/tt-permissions.png" alt="People and permissions"><figcaption><b>People &amp; permissions</b> — named users, booking only on authorised projects</figcaption></figure>
-  </div>
-  <p class="small center">Also delivered: monthly overview with charts, project structure (project → sub-project → task) and SAP master data views.</p>
-</section>
-
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Beyond the brief</p>
-  <h2>What I added for a better user experience</h2>
-  <div class="grid4">
-    <div class="mini"><b>SAP-style timesheet</b><span>bulk entry for a whole week</span></div>
-    <div class="mini"><b>Copy last week</b><span>and duplicate row for recurring work</span></div>
-    <div class="mini"><b>Recording generator</b><span>fill a date range in one step</span></div>
-    <div class="mini"><b>Live timer</b><span>survives a reload, auto-pauses at 8 h</span></div>
-    <div class="mini"><b>Health banners</b><span>missing days and implausible entries</span></div>
-    <div class="mini"><b>Team status</b><span>coverage strips per person and day</span></div>
-    <div class="mini"><b>Reminder nudges</b><span>dialog, banner and notification bell</span></div>
-    <div class="mini"><b>Grouped release queue</b><span>collapsible, searchable, bulk actions</span></div>
-    <div class="mini"><b>Visible validation</b><span>24 h limit, mandatory return comment</span></div>
-    <div class="mini"><b>Deep links</b><span>open an entry or a date directly</span></div>
-    <div class="mini"><b>English &amp; German</b><span>552 translated texts per language</span></div>
-    <div class="mini"><b>Charts &amp; dark mode</b><span>responsive layout, accessibility labels</span></div>
-  </div>
-  <aside class="notes">None of these were in the original brief. Each one came from asking: where will people lose time or make mistakes at month end?</aside>
-</section>
-
-<section class="tt">
-  <p class="kicker">01 · Time Tracking · Status &amp; next steps</p>
-  <h2>Where Time Tracking stands today</h2>
-  <div class="cols three">
-    <div>
-      <h4 class="ok">Delivered</h4>
-      <ul>
-        <li><b>End-to-end flow for all four roles</b>, available on the platform.</li>
-        <li><b>Application Guide</b> and <b>Backend Integration guide</b>.</li>
-      </ul>
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking</p>
+  <h2>Beyond the brief</h2>
+  <div class="extras">
+    <div class="themes" data-stagger>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>Record faster</b><i>4</i></header>
+        <span class="x" data-d="bulk entry for a whole week">SAP-style timesheet</span>
+        <span class="x" data-d="and duplicate row, for recurring work">Copy last week</span>
+        <span class="x" data-d="fill a date range in one step">Recording generator</span>
+        <span class="x" data-d="survives a reload, auto-pauses at 8 h">Live timer</span></div>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6zM9 12l2 2 4-4"/></svg><b>Catch mistakes</b><i>2</i></header>
+        <span class="x" data-d="missing days and implausible entries">Health banners</span>
+        <span class="x" data-d="24 h limit, mandatory return comment">Visible validation</span></div>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.3a3.5 3.5 0 0 1 0 6.4M21.5 20c0-2.6-1.5-4.6-3.7-5.5"/></svg><b>Lead the team</b><i>3</i></header>
+        <span class="x" data-d="coverage strips per person and day">Team status</span>
+        <span class="x" data-d="dialog, banner and notification bell">Reminder nudges</span>
+        <span class="x" data-d="collapsible, searchable, bulk actions">Grouped release queue</span></div>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9zM18.5 15l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z"/></svg><b>Polish</b><i>3</i></header>
+        <span class="x" data-d="open an entry or a date directly">Deep links</span>
+        <span class="x" data-d="552 translated texts per language">English &amp; German</span>
+        <span class="x" data-d="responsive layout, accessibility labels">Charts &amp; dark mode</span></div>
     </div>
-    <div>
-      <h4>Status</h4>
-      <ul>
-        <li><b>Frontend complete</b> — runs on sample data for validation.</li>
-        <li><b>Backend implemented</b> — API, service, database and permission model; merge is the next step.</li>
-        <li><b>SAP posting simulated</b> — interface to be agreed with CO.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Next steps</h4>
-      <ul>
-        <li>Merge the backend and connect the screens to it.</li>
-        <li>Agree the SAP interface (CSV / KB21N) with CO.</li>
-        <li>Add automated tests.</li>
-      </ul>
-    </div>
+    <p class="detail hint">12 extras, none of them in the brief — click one to see what it does.</p>
   </div>
-  <aside class="notes">The process is proven end to end on the screens. The backend is implemented and will be merged next; after that the screens are connected to it. The next decision we need together with CO is the SAP interface.</aside>
+  <aside class="notes">None of these were in the original brief. Each one came from asking: where will people lose time or make mistakes at month end? SAP-style timesheet for bulk entry of a whole week; copy last week and duplicate row for recurring work; recording generator; live timer that survives a reload and auto-pauses at 8 h; health banners; team status with coverage strips; reminder nudges with dialog, banner and notification bell; grouped, collapsible, searchable release queue with bulk actions; visible validation (24 h limit, mandatory return comment); deep links; English and German with 552 translated texts per language; charts, dark mode, responsive layout and accessibility labels.</aside>
+</section>
+
+<section class="tt" data-ch="tt">
+  <p class="kicker">01 · Time Tracking · Status</p>
+  <h2>Time Tracking: where it stands</h2>
+  <div class="lanes" data-stagger>
+    <div class="lane done"><header>Done <i>4</i></header><div>
+      <div class="item"><b>All four role flows</b><span>end to end, on the platform</span></div>
+      <div class="item"><b>Application Guide</b></div>
+      <div class="item"><b>Backend Integration guide</b></div>
+      <div class="item"><b>English &amp; German</b></div>
+    </div></div>
+    <div class="lane hold"><header>On hold <i>1</i></header><div>
+      <div class="item"><b>Backend</b><span>implemented — API, service, database, permissions; merge pending</span></div>
+    </div></div>
+    <div class="lane todo"><header>Open <i>3</i></header><div>
+      <div class="item"><b>SAP interface</b><span>CSV / KB21N — to agree with CO</span></div>
+      <div class="item"><b>Connect screens to the backend</b><span>until then: sample data</span></div>
+      <div class="item"><b>Automated tests</b></div>
+    </div></div>
+  </div>
+  <aside class="notes">The process is proven end to end on the screens: the frontend is complete and runs on sample data for validation. The backend is implemented — API, service, database and permission model — and will be merged next; after that the screens are connected to it. The SAP posting is simulated. The next decision we need together with CO is the SAP interface (CSV / KB21N). Automated tests are still to be added.</aside>
 </section>
 
 <!-- ============================== 02 TASK MANAGEMENT ============================== -->
-<section class="divider tm">
+<section class="divider tm" id="tm" data-ch="tm">
   <p class="num">02</p>
   <h1>Task Management</h1>
-  <p class="lead">Personal backlog, kanban boards and a global view of your work.</p>
-  <p class="meta">October 2026</p>
+  <p class="lead">Capture in seconds. Plan the day. Miss nothing.</p>
+  <p class="meta"><span class="st done lg">Delivered · In use</span>October 2026</p>
+  <img class="hero" src="img/tm-board.png" alt="">
 </section>
 
-<section class="tm">
-  <p class="kicker">02 · Task Management · Objective</p>
-  <h2>One place for everyday work</h2>
-  <h4>The objective</h4>
-  <ul class="big">
-    <li>Every platform user gets <b>one place for their work</b>.</li>
-    <li>A personal backlog, private kanban boards and shared team boards.</li>
-    <li>Fast enough to replace sticky notes and spreadsheets — <b>capture in seconds, plan the day, never miss a due date</b>.</li>
-  </ul>
-  <aside class="notes">Important for fairness: I did not start this application. Colleagues built the first version. My job was to make it complete and pleasant enough for daily use.</aside>
+<section class="tm" data-ch="tm">
+  <p class="kicker">02 · Task Management</p>
+  <h2>Why &amp; approach</h2>
+  <p class="lead" style="margin-bottom:24px">One place for everyday work — backlog, private boards, team boards.</p>
+  <div class="steps" data-stagger>
+    <div class="step done"><span class="n">Wave 1</span><b>Foundations</b><em>Notes, exact drag &amp; drop, search, filters, favourites</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Wave 2</span><b>Editing comfort</b><em>Autosave, toolbar, archive, sorting, Due page, smart dates</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Wave 3</span><b>Power features</b><em>Recurring tasks, attachments — then my own ideas</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Wave 4</span><b>Collaboration</b><em>Team boards, activity log, notifications</em><span class="st done">Done</span></div>
+  </div>
+  <aside class="notes">The objective: every platform user gets one place for their work — a personal backlog, private kanban boards and shared team boards. Fast enough to replace sticky notes and spreadsheets: capture in seconds, plan the day, never miss a due date. Important for fairness: I did not start this application. Colleagues built the first version. My job was to make it complete and pleasant enough for daily use. I worked in small, reviewed steps: first the foundations (task notes, drag and drop with exact position, search, filters, favourites), then editing comfort (autosave with visible status, formatting toolbar and shortcuts, archive, per-column sorting, Due page, smart dates in English and German), then the power features (recurring tasks, drag and drop attachments, and my own additions: quick capture, Today view, dashboard, bulk actions, reusable tags) and finally collaboration (team boards with members, activity log, assignment and due-today notifications). That keeps risk low and progress visible.</aside>
 </section>
 
-<section class="tm">
-  <p class="kicker">02 · Task Management · Approach</p>
-  <h2>Small steps, shipped continuously</h2>
-  <h4>Progress</h4>
-  <ol class="timeline wide">
-    <li><b>Foundations:</b> task notes, drag &amp; drop with exact position, search, filters, favourites.</li>
-    <li><b>Editing comfort:</b> autosave with visible status, formatting toolbar and shortcuts, archive, per-column sorting, Due page, smart dates in English and German.</li>
-    <li><b>Power features:</b> recurring tasks, drag &amp; drop attachments — then my own additions: quick capture, Today view, dashboard, bulk actions, reusable tags.</li>
-    <li><b>Collaboration:</b> team boards with members, activity log, assignment and due-today notifications.</li>
-  </ol>
-  <aside class="notes">I worked in small, reviewed steps: first the foundations, then editing comfort, then the power features and finally collaboration. That keeps risk low and progress visible.</aside>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Delivery</p>
-  <h2>Boards — the daily working surface</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tm-board.png" alt="Kanban board"></figure>
-    <div class="side">
-      <ul>
-        <li><b>Drag &amp; drop</b> lands exactly where you drop it.</li>
-        <li><b>Search and filters</b> by due date, priority, tags, favourites — moving cards still works while filtered.</li>
-        <li><b>Per-column sorting</b> with several keys, remembered per user.</li>
-        <li><b>WIP limits:</b> the column turns red when the limit is exceeded (here 4 / 3).</li>
-        <li>Favourite stars, tag chips, overdue highlighting.</li>
-      </ul>
+<section class="tm" data-ch="tm">
+  <p class="kicker">02 · Task Management</p>
+  <h2>Delivery</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Board</span><span class="tab">Task</span><span class="tab">Due</span><span class="tab">Archive</span><span class="tab">Team board</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/tm-board.png" alt="Kanban board"></figure>
+        <div class="say" data-stagger><h3>The daily working surface</h3><ul><li>Cards land <b>exactly</b> where you drop them</li><li>Filter — and still move cards</li><li><b>WIP limit</b> turns red (4 / 3)</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-taskdialog.png" alt="Task dialog"></figure>
+        <div class="say" data-stagger><h3>One dialog, nothing lost</h3><ul><li>Rich text — <b>no markdown</b> needed</li><li><b>Autosave</b> with visible status</li><li>Checklist, repeat, tags, files</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-due.png" alt="Due page"></figure>
+        <div class="say" data-stagger><h3>Never miss a date</h3><ul><li>Overdue and due today, <b>all boards</b></li><li>Digest every morning at <b>07:00</b></li><li>Recurring tasks</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-archive.png" alt="Archive"></figure>
+        <div class="say" data-stagger><h3>Never lose a task</h3><ul><li>Tidy boards <b>without deleting</b></li><li>Restore in one click</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-teamboard.png" alt="Team board"></figure>
+        <div class="say" data-stagger><h3>From personal to shared</h3><ul><li><b>Named members</b>, assignees</li><li>Notified when assigned</li><li>Access checked <b>on the server</b></li></ul></div></div>
     </div>
   </div>
-  <aside class="notes">This is the screen people have open all day. Notice the red 4 of 3 in the In-progress column — the board tells the team when they have started too much.</aside>
+  <aside class="notes"><p><b>Board:</b> This is the screen people have open all day. Drag and drop lands exactly where you drop it. Search and filters by due date, priority, tags, favourites — moving cards still works while filtered. Per-column sorting with several keys, remembered per user. Notice the red 4 of 3 in the In-progress column — the board tells the team when they have started too much. Favourite stars, tag chips, overdue highlighting.</p><p><b>Task:</b> Most tickets ended up in this dialog. The goal: writing a task should feel like writing in a modern editor, and nothing you type is ever lost. Rich description with formatting toolbar and keyboard shortcuts; autosave with a visible “Saved” status, unsaved text is protected when closing; editable and reorderable checklist with progress; priority, due date, repeat, reusable tags; notes, attachments by drag and drop (up to 25 MB), activity history.</p><p><b>Due and archive:</b> Overdue and due-today tasks from all boards in one list. Recurring tasks (daily, weekly, monthly, last day of month) and a due-today digest every morning at 07:00 — each user can opt out. The archive tidies boards without deleting; restore with one click.</p><p><b>Team board:</b> This was the biggest step in October: the application became a team tool. Boards shared with named members; every member sees and edits all tasks. Assignees on cards, assignee filter, “My Work” lists what is assigned to me. Notification when a task is assigned to you. Activity log per task — who changed what, and when. Access is checked on the server: owner, assignee or team member — otherwise denied. That needed backend work — membership, permissions, notifications — not just a new screen.</p></aside>
 </section>
 
-<section class="tm">
-  <p class="kicker">02 · Task Management · Delivery</p>
-  <h2>The task — everything in one dialog</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tm-taskdialog.png" alt="Task dialog"></figure>
-    <div class="side">
-      <ul>
-        <li><b>Rich description</b> with formatting toolbar and keyboard shortcuts — no markdown knowledge needed.</li>
-        <li><b>Autosave</b> with a visible “Saved” status; unsaved text is protected when closing.</li>
-        <li><b>Checklist</b> — editable and reorderable, with progress.</li>
-        <li>Priority, due date, <b>repeat</b>, reusable <b>tags</b>.</li>
-        <li>Notes, attachments by drag &amp; drop (up to 25 MB), activity history.</li>
-      </ul>
+<section class="tm" data-ch="tm">
+  <p class="kicker">02 · Task Management</p>
+  <h2>Beyond the brief</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab own">Quick capture</span><span class="tab own">Today</span><span class="tab own">Dashboard</span><span class="tab own">Bulk actions</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/tm-quickcapture.png" alt="Quick capture"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>A task in five seconds</h3><ul><li><b>Alt + N</b>, on any page</li><li><code>tomorrow 3pm #procurement !high</code></li><li>Dates in English and German</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-today.png" alt="Today planning view"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>What fits into today?</h3><ul><li>Drag tasks into today's plan</li><li><b>Capacity meter</b> warns when overbooked</li><li><b>Carry over</b> in one click</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-dashboard.png" alt="Personal dashboard"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>My work in numbers</h3><ul><li>Overdue, due this week</li><li>Weekly <b>throughput</b></li><li>WIP-limit breaches</li></ul></div></div>
+      <div><figure class="shot"><img src="img/tm-bulk.png" alt="Bulk actions"></figure>
+        <div class="say" data-stagger><p class="tag">Own idea</p><h3>Many tasks, one move</h3><ul><li>Select several backlog tasks</li><li>Tag, prioritise, reschedule</li><li>Send to a board or archive</li></ul></div></div>
     </div>
   </div>
-  <aside class="notes">Most tickets ended up in this dialog. The goal: writing a task should feel like writing in a modern editor, and nothing you type is ever lost.</aside>
+  <aside class="notes"><p><b>Quick capture:</b> This was my own idea. If capturing a task takes longer than writing it on paper, people will not use the tool. So one shortcut, one line, done. Open with Alt + N on any page. Type naturally: “tomorrow 3pm” becomes the due date, #procurement a tag, !high the priority, @Board the destination. Recognised parts are highlighted while you type and shown as a preview. Dates are understood in English and German.</p><p><b>Today:</b> A to-do list tells you what exists. This view tells you what fits into today — and is honest when it does not fit. Drag tasks into today's plan from “Unplanned” and “Upcoming”. The capacity meter warns when the day is overbooked (“2 over capacity”). Carry over unfinished tasks from previous days in one click. Tasks from all boards and the backlog in one list.</p><p><b>Dashboard and bulk actions:</b> Overdue, due this week, weekly throughput, open work by priority, WIP-limit breaches. Bulk actions: select several backlog tasks, then tag, prioritise, reschedule, send to a board or archive. Both delivered without a ticket, together with reusable tags, multi-select filters and Ctrl + Enter to save.</p></aside>
 </section>
 
-<section class="tm">
-  <p class="kicker">02 · Task Management · Beyond the brief</p>
-  <h2>Quick capture — a task in five seconds, from anywhere</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tm-quickcapture.png" alt="Quick capture"></figure>
-    <div class="side">
-      <p class="pill own">Own initiative</p>
-      <ul>
-        <li>Open with <b>Alt + N</b> on any page.</li>
-        <li>Type naturally: <code>tomorrow 3pm</code> becomes the due date, <code>#procurement</code> a tag, <code>!high</code> the priority, <code>@Board</code> the destination.</li>
-        <li>Recognised parts are highlighted while you type and shown as a preview.</li>
-        <li>Dates are understood in <b>English and German</b>.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">This was my own idea. If capturing a task takes longer than writing it on paper, people will not use the tool. So one shortcut, one line, done.</aside>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Beyond the brief</p>
-  <h2>Today — plan the day realistically</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tm-today.png" alt="Today planning view"></figure>
-    <div class="side">
-      <p class="pill own">Own initiative</p>
-      <ul>
-        <li>Drag tasks into today's plan from “Unplanned” and “Upcoming”.</li>
-        <li><b>Capacity meter</b> warns when the day is overbooked (“2 over capacity”).</li>
-        <li><b>Carry over</b> unfinished tasks from previous days in one click.</li>
-        <li>Tasks from all boards and the backlog in one list.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">A to-do list tells you what exists. This view tells you what fits into today — and is honest when it does not fit.</aside>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Beyond the brief</p>
-  <h2>Personal dashboard and bulk actions</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/tm-dashboard.png" alt="Personal dashboard"><figcaption><b>Dashboard</b> — overdue, due this week, weekly throughput, open work by priority, WIP-limit breaches</figcaption></figure>
-    <figure class="shot"><img src="img/tm-bulk.png" alt="Bulk actions"><figcaption><b>Bulk actions</b> — select several backlog tasks, then tag, prioritise, reschedule, send to a board or archive</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">Own initiative</span> Both delivered without a ticket, together with reusable tags, multi-select filters and Ctrl + Enter to save</p>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Delivery</p>
-  <h2>Never miss a date — never lose a task</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/tm-due.png" alt="Due page"><figcaption><b>Due</b> — overdue and due-today tasks from all boards in one list</figcaption></figure>
-    <figure class="shot"><img src="img/tm-archive.png" alt="Archive"><figcaption><b>Archive</b> — tidy boards without deleting; restore with one click</figcaption></figure>
-  </div>
-  <p class="small center">Plus <b>recurring tasks</b> (daily, weekly, monthly, last day of month) and a <b>due-today digest</b> every morning at 07:00 — each user can opt out.</p>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Delivery</p>
-  <h2>Team boards — from personal tool to shared workspace</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/tm-teamboard.png" alt="Team board"></figure>
-    <div class="side">
-      <ul>
-        <li>Boards shared with <b>named members</b>; every member sees and edits all tasks.</li>
-        <li><b>Assignees</b> on cards, assignee filter, “My Work” lists what is assigned to me.</li>
-        <li><b>Notification</b> when a task is assigned to you.</li>
-        <li><b>Activity log</b> per task — who changed what, and when.</li>
-        <li>Access is checked on the server: owner, assignee or team member — otherwise denied.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">This was the biggest step in October: the application became a team tool. That needed backend work — membership, permissions, notifications — not just a new screen.</aside>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Requirement versus initiative</p>
-  <h2>What was asked — and what I added</h2>
+<section class="tm" data-ch="tm">
+  <p class="kicker">02 · Task Management</p>
+  <h2>Status</h2>
   <div class="cols">
     <div class="panel">
-      <h4><span class="pill req">Requirement</span> what was asked</h4>
-      <ul class="tight">
-        <li>Task notes · search, filters, favourites</li>
-        <li>Exact drag &amp; drop positions</li>
-        <li>Autosave with status, explicit description save</li>
-        <li>Formatting toolbar and shortcuts</li>
-        <li>Archive with its own page</li>
-        <li>Multi-key column sorting, remembered</li>
-        <li>Smart date recognition (EN / DE)</li>
-        <li>Recurring tasks</li>
-        <li>Drag &amp; drop attachments</li>
-        <li>Pinned task input, layout and assignment clean-up</li>
-      </ul>
+      <h4>Requested · 10</h4>
+      <div class="pills ok" data-stagger>
+        <span>Notes, search, filters, favourites</span><span>Exact drag &amp; drop</span><span>Autosave with status</span><span>Formatting toolbar</span><span>Archive page</span><span>Multi-key sorting</span><span>Smart dates EN / DE</span><span>Recurring tasks</span><span>Attachments by drag &amp; drop</span><span>Pinned input, layout clean-up</span>
+      </div>
     </div>
-    <div class="panel own">
-      <h4><span class="pill own">Own initiative</span> for a better experience</h4>
-      <ul class="tight">
-        <li><b>Global quick capture</b> with inline shortcuts</li>
-        <li><b>Today</b> planning view with capacity and carry-over</li>
-        <li><b>Personal dashboard</b> with throughput and WIP limits</li>
-        <li><b>Bulk actions</b> on the backlog</li>
-        <li><b>Reusable tags</b> and tag filter</li>
-        <li>Editable, reorderable checklist</li>
-        <li>Unsaved-changes guard, Ctrl + Enter to save</li>
-        <li>Multi-select filters, moving cards while filtered</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">Left is what the tickets asked for. Right is what I proposed and built because I use the tool myself and saw what was missing for a smooth day.</aside>
-</section>
-
-<section class="tm">
-  <p class="kicker">02 · Task Management · Delivered</p>
-  <h2>What Task Management delivers today</h2>
-  <h4 class="ok">Delivered</h4>
-  <div class="cols">
-    <ul>
-      <li><b>Task notes</b> with formatting toolbar and autosave.</li>
-      <li><b>Search, filters, favourites</b> and column sorting.</li>
-      <li><b>Drag &amp; drop</b> for tasks and attachments.</li>
-      <li><b>Smart date recognition</b>, recurring tasks and archive.</li>
-    </ul>
-    <ul>
-      <li><b>Quick capture</b>, Today view and dashboard.</li>
-      <li><b>Bulk actions</b>, reusable tags and editable checklists.</li>
-      <li><b>Team boards</b> with members and activity log.</li>
-      <li><b>Notifications</b> for assignments and tasks due today.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================== 03 RISK MANAGEMENT ============================== -->
-<section class="divider rm">
-  <p class="num">03</p>
-  <h1>Risk Management</h1>
-  <p class="lead">IT/OT risks, measures, approvals and the IT Risk Board — one governed flow.</p>
-  <p class="meta">November 2026</p>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Objective</p>
-  <h2>From spreadsheets and e-mail approvals to one auditable process</h2>
-  <div class="cols">
-    <div>
-      <h4>Today's pain points</h4>
-      <ul>
-        <li>Risks live in <b>spreadsheets and slide decks</b>.</li>
-        <li>Approvals happen <b>by e-mail</b> — hard to trace.</li>
-        <li>Approved measures are <b>typed again</b> into Demand Management.</li>
-        <li>IT Risk Board meetings are <b>prepared by hand</b>.</li>
-        <li>Audit evidence is collected <b>ad hoc</b>.</li>
-      </ul>
-      <p class="small">Drivers: ISO 31000, NIS2, GDPR Art. 32.</p>
-    </div>
-    <div>
-      <h4>The target process</h4>
-      <div class="vflow">
-        <span>Identify &amp; assess the risk</span>
-        <span>Define measures</span>
-        <span>Rule-based technical &amp; business approval</span>
-        <span>Hand over to Demand Management</span>
-        <span>Track implementation status</span>
-        <span>Review effectiveness · IT Risk Board</span>
+    <div class="panel" style="border-left:6px solid var(--accent)">
+      <h4>My own additions · 8</h4>
+      <div class="pills ok" data-stagger>
+        <span>Quick capture</span><span>Today view</span><span>Personal dashboard</span><span>Bulk actions</span><span>Reusable tags</span><span>Editable checklist</span><span>Unsaved-changes guard</span><span>Multi-select filters</span>
       </div>
     </div>
   </div>
-  <aside class="notes">Risk Management sits upstream of Demand Management: a risk leads to a measure, an approved measure becomes a demand. Today that chain is broken in several places. The objective is to close it and make it auditable.</aside>
+  <div class="bar"><span class="st done">Delivered · In use</span><span>Plus <b>team boards, activity log and notifications</b> — frontend and backend.</span></div>
+  <aside class="notes">Left is what the tickets asked for: task notes with search, filters and favourites; exact drag and drop positions; autosave with status and explicit description save; formatting toolbar and shortcuts; archive with its own page; multi-key column sorting, remembered; smart date recognition in English and German; recurring tasks; drag and drop attachments; pinned task input, layout and assignment clean-up. Right is what I proposed and built because I use the tool myself and saw what was missing for a smooth day: global quick capture with inline shortcuts; Today planning view with capacity and carry-over; personal dashboard with throughput and WIP limits; bulk actions on the backlog; reusable tags and tag filter; editable, reorderable checklist; unsaved-changes guard and Ctrl + Enter to save; multi-select filters and moving cards while filtered. Everything is delivered, including team boards with members and activity log, and notifications for assignments and tasks due today.</aside>
 </section>
 
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Approach</p>
-  <h2>Contract first — agree the “what” before building the “how”</h2>
-  <div class="steps">
-    <div class="step"><span>1</span><b>Design</b><em>Solution overview, architecture with 10 documented decisions, backlog with 4 delivery increments</em></div>
-    <div class="step"><span>2</span><b>API contract</b><em>7 services, 82 operations, 221 message types — reviewed and merged on 5 Nov</em></div>
-    <div class="step"><span>3</span><b>Clickable prototype</b><em>14 screens on a simulated backend that implements 81 of the 82 operations — merged on 5 Nov</em></div>
-    <div class="step next"><span>4</span><b>Backend</b><em>Next: implement the contract increment by increment</em></div>
-  </div>
-  <div class="cols mt">
+<!-- ============================== 03 RISK MANAGEMENT ============================== -->
+<section class="divider rm" id="rm" data-ch="rm">
+  <p class="num">03</p>
+  <h1>Risk Management</h1>
+  <p class="lead">From spreadsheets to one governed flow.</p>
+  <p class="meta"><span class="st prog lg">In progress</span>November 2026</p>
+  <img class="hero" src="img/rm-dashboard.png" alt="">
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management · Why</p>
+  <h2>From e-mail approvals to an audit trail</h2>
+  <div class="cols">
     <div>
-      <h4>Why this order</h4>
-      <ul>
-        <li>The business can <b>click through the whole process</b> before a single line of backend exists.</li>
-        <li>Frontend and backend share <b>one agreed contract</b> — no surprises later.</li>
-        <li>When the backend is ready, the simulation is switched off — <b>the screens stay</b>.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Built for our group structure</h4>
-      <ul>
-        <li><b>Multi-tenant</b> from the start (e.g. IT and OT security).</li>
-        <li><b>12 business roles</b>, 13 fine-grained capabilities.</li>
-        <li>Configurable assessment model and approval rules — no code change needed.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">Of the three projects this is the one where I owned the design from the first page: architecture, contract and prototype. The contract-first order is what lets us validate with stakeholders now and build the backend with confidence afterwards.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>IT Risk Dashboard — the management view</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/rm-dashboard.png" alt="IT Risk Dashboard"></figure>
-    <div class="side">
-      <ul>
-        <li>Five key figures with trend against last quarter.</li>
-        <li><b>Interactive 5 × 5 risk matrix</b> — click a cell to see exactly those risks.</li>
-        <li>Risks by category and status, measure status, top-10 risks.</li>
-        <li>Filter by country and IT department.</li>
-        <li>The “Prototype data” badge keeps it transparent that the data is simulated.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">This is the screen for this audience. Every number and every cell is clickable and leads to the underlying list — no dead ends.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>Risk register and guided risk creation</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/rm-risks.png" alt="Risk register"><figcaption><b>Risk register</b> — filters by status, category, band and owner; inherent and residual score side by side</figcaption></figure>
-    <figure class="shot"><img src="img/rm-wizard.png" alt="New risk wizard"><figcaption><b>4-step wizard</b> — <span class="hl">similar risks are detected while typing</span>, before a duplicate is created</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">UX touch</span> Live duplicate detection, summary rail that fills in as you go, shareable filter links</p>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>One risk — assessment, measures, approvals, history</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/rm-risk-assessment.png" alt="Risk assessment"></figure>
-    <div class="side">
-      <ul>
-        <li><b>Three ratings at a glance:</b> inherent → residual → target risk, positioned on the matrix.</li>
-        <li>Existing controls and their effectiveness.</li>
-        <li>Tabs for details, measures, approval process and complete history.</li>
-        <li>“Next steps” panel tells the user what is expected of them.</li>
-        <li>Comments with mentions; activity feed on the right.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">The example is the SAP system outage risk. You can see how controls bring the score from 20 to 15, and where the planned measure should take it.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>Measures and rule-based approvals</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/rm-measure-approval.png" alt="Measure approval chain"><figcaption><b>Approval chain</b> — technical, business and IT Risk Board decisions with reasons and dates, fully traceable</figcaption></figure>
-    <figure class="shot"><img src="img/rm-admin-decision.png" alt="Decision matrix"><figcaption><b>Decision matrix</b> — rules define who must approve; <span class="hl">“Try the matrix”</span> simulates the result for any case</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">UX touch</span> Approval-plan preview before submitting, decision-matrix simulator, personal approvals inbox grouped by urgency</p>
-  <aside class="notes">This replaces approval by e-mail. The rules are data, not code: risk level and category decide which approvers are needed. The simulator lets governance test a rule before activating it.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>Hand-over to Demand Management — no retyping</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/rm-measure-impl.png" alt="Measure implementation tracking"><figcaption><b>On the measure</b> — linked demand, phase, progress and every synchronisation event</figcaption></figure>
-    <figure class="shot"><img src="img/rm-integration.png" alt="Implementation tracking"><figcaption><b>Implementation tracking</b> — all hand-overs with status, retries and reconciliation cases</figcaption></figure>
-  </div>
-  <p class="small center">Each approved measure revision is handed over exactly once, status flows back automatically, and mismatches are raised as reconciliation cases instead of being silently lost.</p>
-  <aside class="notes">This is the link to an application we already run. The design guarantees a measure is never handed over twice, and that someone is told when the two systems disagree.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>IT Risk Board — meeting preparation without slide decks</h2>
-  <div class="duo">
-    <figure class="shot"><img src="img/rm-board.png" alt="IT Risk Board overview"><figcaption><b>Board overview</b> — next meeting, proposed topics, agenda with timing, decision items</figcaption></figure>
-    <figure class="shot"><img src="img/rm-meeting.png" alt="Meeting minutes"><figcaption><b>Minutes &amp; resolutions</b> — decisions, responsibles, due dates and follow-up actions</figcaption></figure>
-  </div>
-  <p class="small center">Top risks are proposed for the agenda automatically; decisions are recorded against the risk and appear in its history.</p>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Delivery</p>
-  <h2>Reporting, audit and configuration</h2>
-  <div class="trio">
-    <figure class="shot"><img src="img/rm-reports.png" alt="Reports"><figcaption><b>Reports</b> — exposure, trend, data quality, audit export</figcaption></figure>
-    <figure class="shot"><img src="img/rm-auditor.png" alt="Read-only auditor mode"><figcaption><b>Auditor mode</b> — read-only access with full history</figcaption></figure>
-    <figure class="shot"><img src="img/rm-admin-assessment.png" alt="Assessment model"><figcaption><b>Assessment model</b> — scales and thresholds, versioned</figcaption></figure>
-  </div>
-  <p class="pillrow"><span class="pill own">UX touch</span> Demo persona switcher (14 personas) — stakeholders experience the application in their own role</p>
-  <aside class="notes">For workshops I built a persona switcher: a risk owner, an approver or an auditor can each see exactly their view of the same data. That makes feedback sessions far more concrete.</aside>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · UX decisions</p>
-  <h2>What I added for a better user experience</h2>
-  <div class="grid4">
-    <div class="mini"><b>Clickable risk matrix</b><span>from overview to list in one click</span></div>
-    <div class="mini"><b>Duplicate detection</b><span>similar risks shown while typing</span></div>
-    <div class="mini"><b>Guided wizard</b><span>four steps with a live summary</span></div>
-    <div class="mini"><b>Approval preview</b><span>see who will decide before submitting</span></div>
-    <div class="mini"><b>Matrix simulator</b><span>test approval rules safely</span></div>
-    <div class="mini"><b>Approvals inbox</b><span>overdue · this week · later</span></div>
-    <div class="mini"><b>“Next steps” panel</b><span>always clear what to do now</span></div>
-    <div class="mini"><b>Persona switcher</b><span>14 demo personas for workshops</span></div>
-    <div class="mini"><b>Read-only auditor mode</b><span>with a clear banner</span></div>
-    <div class="mini"><b>Shareable links</b><span>filters and tabs are part of the link</span></div>
-    <div class="mini"><b>Consistent states</b><span>loading, empty and error handled everywhere</span></div>
-    <div class="mini"><b>Responsive &amp; dark mode</b><span>validated forms, clear feedback</span></div>
-  </div>
-</section>
-
-<section class="rm">
-  <p class="kicker">03 · Risk Management · Status &amp; next steps</p>
-  <h2>Where Risk Management stands today</h2>
-  <div class="cols three">
-    <div>
-      <h4 class="ok">Delivered</h4>
-      <ul>
-        <li>Design documents: architecture, solution overview, delivery backlog.</li>
-        <li>Complete API contract, reviewed and merged.</li>
-        <li>Clickable prototype of the whole process with realistic sample data.</li>
-        <li><b>Backend started:</b> configuration and risk register, with the permission model.</li>
-      </ul>
+      <h4>Today</h4>
+      <div class="pills pain" data-stagger>
+        <span>Risks in spreadsheets</span><span>Approvals by e-mail</span><span>Measures typed twice</span><span>Board prepared by hand</span><span>Audit evidence ad hoc</span>
+      </div>
     </div>
     <div>
-      <h4 class="warn">Status</h4>
-      <ul>
-        <li>The <b>prototype</b> remains the basis for validation — clearly labelled “Prototype data”.</li>
-        <li><b>Risk register and configuration</b> already work with the real backend; the other areas run on prototype data.</li>
-        <li>English texts only so far; automated tests exist for the backend, not yet for the screens.</li>
-      </ul>
+      <h4>Target: one flow</h4>
+      <div class="vflow" data-stagger>
+        <span>Identify &amp; assess the risk</span>
+        <span>Define measures</span>
+        <span>Rule-based approval</span>
+        <span>Hand over to Demand Management</span>
+        <span>Track implementation</span>
+        <span>Review · IT Risk Board</span>
+      </div>
     </div>
-    <div>
-      <h4>Next steps</h4>
-      <ul>
-        <li>Stakeholder walkthrough with the prototype → confirm scope.</li>
-        <li>Continue the backend in <b>4 increments</b> — the first is in progress.</li>
-        <li>German translation and tests for the screens alongside.</li>
-      </ul>
+  </div>
+  <aside class="notes">Today's pain points: risks live in spreadsheets and slide decks; approvals happen by e-mail and are hard to trace; approved measures are typed again into Demand Management; IT Risk Board meetings are prepared by hand; audit evidence is collected ad hoc. Drivers are ISO 31000, NIS2 and GDPR Art. 32. Risk Management sits upstream of Demand Management: a risk leads to a measure, an approved measure becomes a demand. Today that chain is broken in several places. The objective is to close it and make it auditable: identify and assess the risk, define measures, rule-based technical and business approval, hand over to Demand Management, track implementation status, review effectiveness in the IT Risk Board.</aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management</p>
+  <h2>Approach</h2>
+  <div class="steps" data-stagger>
+    <div class="step done"><span class="n">Step 1</span><b>Design</b><em>Architecture, 10 documented decisions, 4 increments</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Step 2</span><b>API contract</b><em>Reviewed and merged on 5 Nov</em><span class="st done">Done</span></div>
+    <div class="step done"><span class="n">Step 3</span><b>Clickable prototype</b><em>The whole process on a simulated backend</em><span class="st done">Done</span></div>
+    <div class="step prog"><span class="n">Step 4</span><b>Backend</b><em>Increment by increment — the first is running</em><span class="st prog">In progress</span></div>
+  </div>
+  <aside class="notes">Of the three projects this is the one where I owned the design from the first page: architecture, contract and prototype. Design: solution overview, architecture with 10 documented decisions, backlog with 4 delivery increments. API contract: 7 services, 82 operations, 221 message types — reviewed and merged on 5 November. Clickable prototype: 14 screens on a simulated backend that implements 81 of the 82 operations — merged on 5 November. Why this order: the business can click through the whole process before a single line of backend exists; frontend and backend share one agreed contract — no surprises later; when the backend is ready, the simulation is switched off and the screens stay. Built for our group structure: multi-tenant from the start (for example IT and OT security), 12 business roles with 13 fine-grained capabilities, configurable assessment model and approval rules — no code change needed.</aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management · Risks</p>
+  <h2>See the risk. Act on it.</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Dashboard</span><span class="tab">Register</span><span class="tab own">New risk</span><span class="tab">One risk</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/rm-dashboard.png" alt="IT Risk Dashboard"></figure>
+        <div class="say" data-stagger><h3>The management view</h3><ul><li>Five key figures <b>with trend</b></li><li>Click a <b>matrix cell</b> → those risks</li><li>Filter by country and department</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-risks.png" alt="Risk register"></figure>
+        <div class="say" data-stagger><h3>Every risk, one list</h3><ul><li>Filter by status, category, band, owner</li><li><b>Inherent vs residual</b>, side by side</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-wizard.png" alt="New risk wizard"></figure>
+        <div class="say" data-stagger><p class="tag">UX touch</p><h3>Four guided steps</h3><ul><li><b>Duplicates caught</b> while typing</li><li>Summary fills in as you go</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-risk-assessment.png" alt="Risk assessment"></figure>
+        <div class="say" data-stagger><h3>Three ratings at a glance</h3><ul><li>Inherent → residual → target</li><li>Controls and their effectiveness</li><li><b>“Next steps”</b> says what to do</li></ul></div></div>
     </div>
+  </div>
+  <aside class="notes"><p><b>Dashboard:</b> This is the screen for this audience. Five key figures with trend against last quarter. Every number and every cell of the interactive 5 × 5 risk matrix is clickable and leads to the underlying list — no dead ends. Risks by category and status, measure status, top-10 risks. Filter by country and IT department. The “Prototype data” badge keeps it transparent that the data is simulated.</p><p><b>Register and wizard:</b> Filters by status, category, band and owner; inherent and residual score side by side. The 4-step wizard detects similar risks while typing, before a duplicate is created. UX touches: live duplicate detection, summary rail that fills in as you go, shareable filter links.</p><p><b>One risk:</b> The example is the SAP system outage risk. Three ratings at a glance: inherent, residual and target risk, positioned on the matrix. You can see how controls bring the score from 20 to 15, and where the planned measure should take it. Tabs for details, measures, approval process and complete history. The “Next steps” panel tells the user what is expected of them. Comments with mentions; activity feed on the right.</p></aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management · Measures</p>
+  <h2>Approval by rule, not by e-mail</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Approval chain</span><span class="tab own">Decision matrix</span><span class="tab">Hand-over</span><span class="tab">Tracking</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/rm-measure-approval.png" alt="Measure approval chain"></figure>
+        <div class="say" data-stagger><h3>Who decided, and why</h3><ul><li>Technical, business, IT Risk Board</li><li>Reasons and dates — <b>fully traceable</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-admin-decision.png" alt="Decision matrix"></figure>
+        <div class="say" data-stagger><p class="tag">UX touch</p><h3>Rules are data, not code</h3><ul><li>Risk level and category pick the approvers</li><li><b>“Try the matrix”</b> simulates any case</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-measure-impl.png" alt="Measure implementation tracking"></figure>
+        <div class="say" data-stagger><h3>No retyping</h3><ul><li>Approved measure → demand, <b>exactly once</b></li><li>Status flows back automatically</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-integration.png" alt="Implementation tracking"></figure>
+        <div class="say" data-stagger><h3>Nothing silently lost</h3><ul><li>Every hand-over with status and retries</li><li>Mismatches become <b>reconciliation cases</b></li></ul></div></div>
+    </div>
+  </div>
+  <aside class="notes"><p><b>Approval chain and decision matrix:</b> This replaces approval by e-mail. Technical, business and IT Risk Board decisions with reasons and dates, fully traceable. The rules are data, not code: risk level and category decide which approvers are needed. The simulator — “Try the matrix” — lets governance test a rule before activating it. UX touches: approval-plan preview before submitting, decision-matrix simulator, personal approvals inbox grouped by urgency.</p><p><b>Hand-over and tracking:</b> This is the link to an application we already run. On the measure: linked demand, phase, progress and every synchronisation event. Implementation tracking: all hand-overs with status, retries and reconciliation cases. Each approved measure revision is handed over exactly once, status flows back automatically, and mismatches are raised as reconciliation cases instead of being silently lost. The design guarantees a measure is never handed over twice, and that someone is told when the two systems disagree.</p></aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management · Governance</p>
+  <h2>Board, audit, configuration</h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">IT Risk Board</span><span class="tab">Minutes</span><span class="tab">Reports</span><span class="tab">Auditor</span><span class="tab">Assessment model</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/rm-board.png" alt="IT Risk Board overview"></figure>
+        <div class="say" data-stagger><h3>No more slide decks</h3><ul><li>Next meeting, agenda with timing</li><li>Top risks <b>proposed automatically</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-meeting.png" alt="Meeting minutes"></figure>
+        <div class="say" data-stagger><h3>Decisions that stick</h3><ul><li>Decisions, owners, due dates</li><li>Recorded in the <b>risk's history</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-reports.png" alt="Reports"></figure>
+        <div class="say" data-stagger><h3>Ready for the audit</h3><ul><li>Exposure, trend, data quality</li><li><b>Audit export</b></li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-auditor.png" alt="Read-only auditor mode"></figure>
+        <div class="say" data-stagger><h3>Look, don't touch</h3><ul><li><b>Read-only</b>, with full history</li></ul></div></div>
+      <div><figure class="shot"><img src="img/rm-admin-assessment.png" alt="Assessment model"></figure>
+        <div class="say" data-stagger><h3>Configured, not coded</h3><ul><li>Scales and thresholds</li><li><b>Versioned</b></li></ul></div></div>
+    </div>
+  </div>
+  <aside class="notes"><p><b>IT Risk Board and minutes:</b> Meeting preparation without slide decks. Board overview: next meeting, proposed topics, agenda with timing, decision items. Minutes and resolutions: decisions, responsibles, due dates and follow-up actions. Top risks are proposed for the agenda automatically; decisions are recorded against the risk and appear in its history.</p><p><b>Reports, auditor, assessment model:</b> Reports cover exposure, trend, data quality and audit export. Auditor mode is read-only access with full history. The assessment model holds scales and thresholds, versioned. For workshops I built a persona switcher with 14 demo personas: a risk owner, an approver or an auditor can each see exactly their view of the same data. That makes feedback sessions far more concrete.</p></aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management</p>
+  <h2>Beyond the brief</h2>
+  <div class="extras">
+    <div class="themes two" data-stagger>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4"/></svg><b>Find &amp; record</b><i>2</i></header>
+        <span class="x" data-d="from overview to list in one click">Clickable risk matrix</span>
+        <span class="x" data-d="similar risks shown while typing">Duplicate detection</span></div>
+      <div class="theme"><header><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8.5 12l2.5 2.5 4.5-5"/></svg><b>Decide</b><i>2</i></header>
+        <span class="x" data-d="see who will decide before submitting">Approval preview</span>
+        <span class="x" data-d="test approval rules safely">Matrix simulator</span></div>
+    </div>
+    <p class="detail hint">Four UX decisions — click one to see what it does.</p>
+  </div>
+  <aside class="notes">The four UX decisions with the most impact: a clickable risk matrix that goes from overview to list in one click; duplicate detection with similar risks shown while typing; an approval preview that shows who will decide before submitting; and a matrix simulator to test approval rules safely. Also built, not shown here: a “Next steps” panel so it is always clear what to do now; a persona switcher with 14 demo personas for workshops; a guided wizard in four steps with a live summary; an approvals inbox grouped into overdue, this week and later; a read-only auditor mode with a clear banner; shareable links where filters and tabs are part of the link; consistent loading, empty and error states everywhere; responsive layout, dark mode, validated forms and clear feedback.</aside>
+</section>
+
+<section class="rm" data-ch="rm">
+  <p class="kicker">03 · Risk Management</p>
+  <h2>Status</h2>
+  <div class="heat" data-stagger>
+    <span></span><span class="h">Master data</span><span class="h">Risk register</span><span class="h">Measures</span><span class="h">Approvals</span><span class="h">IT Risk Board</span><span class="h">Tracking</span><span class="h">Reports</span><span class="h">Dashboard</span>
+    <span class="r">Design &amp; contract<small>reviewed, merged</small></span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span>
+    <span class="r">Screens<small>clickable prototype</small></span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span><span class="cell done">Done</span>
+    <span class="r">Backend<small>real data</small></span><span class="cell prog">In progress</span><span class="cell prog">In progress</span><span class="cell todo">Open</span><span class="cell todo">Open</span><span class="cell todo">Open</span><span class="cell todo">Open</span><span class="cell todo">Open</span><span class="cell todo">Open</span>
+  </div>
+  <div class="between mt">
+    <div class="story" style="margin-top:0"><em>Also open</em><span class="st todo">German texts</span><span class="st todo">Tests for the screens</span><span class="st todo">Scope sign-off</span></div>
+    <p class="small" style="margin:0">Not productive yet — validated on the prototype.</p>
   </div>
   <p class="footnote">App scaffold and CI pipeline were provided by the platform team.</p>
-  <aside class="notes">Again plainly: nothing here is productive yet. The process is validated on the prototype, the contract is agreed, and the backend has started — the risk register and the configuration already work on real data. Measures, approvals, the IT Risk Board and reporting follow in the next increments.</aside>
+  <aside class="notes">Again plainly: nothing here is productive yet. Delivered: the design documents — architecture, solution overview, delivery backlog; the complete API contract, reviewed and merged; the clickable prototype of the whole process with realistic sample data. The backend has started with the first of four increments: configuration (master data) and the risk register already work with the real backend, with the permission model; the other areas — measures, approvals, the IT Risk Board, implementation tracking, reporting and the dashboard — run on prototype data, clearly labelled “Prototype data”, and follow in the next increments. English texts only so far; automated tests exist for the backend, not yet for the screens. Next steps: stakeholder walkthrough with the prototype to confirm the scope, continue the backend, German translation and tests for the screens alongside.</aside>
 </section>
 
 <!-- ============================== 04 VERSIONING & RELEASES ============================== -->
-<section class="divider cs">
+<section class="divider rel" id="rel" data-ch="rel">
   <p class="num">04</p>
   <h1>Versioning &amp; Releases</h1>
-  <p class="lead">One release process for every application on the EOS platform.</p>
-  <p class="meta">Platform-wide · Changeset CLI</p>
+  <p class="lead">One tool. One process. Every repo.</p>
+  <p class="meta"><span class="st done lg">Delivered · In use</span>Platform-wide · Changeset CLI</p>
+  <img class="hero" src="img/cs-changelog.png" alt="">
 </section>
 
-<section class="cs">
-  <p class="kicker">04 · Versioning &amp; Releases · Objective</p>
-  <h2>One way to version and release — for all applications</h2>
-  <div class="cols">
-    <div>
-      <h4>The need</h4>
-      <ul>
-        <li>The EOS platform consists of <b>many applications</b>, each in its own repository.</li>
-        <li>Every one of them needs <b>version numbers, a changelog and releases</b>.</li>
-        <li>This should work <b>the same way everywhere</b> — without manual steps.</li>
-      </ul>
-    </div>
-    <div>
-      <h4>The objective</h4>
-      <ul>
-        <li><b>One tool and one process</b> for all frontends and services.</li>
-        <li>Every change <b>describes itself</b> — in one sentence, written by the developer.</li>
-        <li>Version, changelog and release are created <b>automatically</b>.</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">This topic is different from the three products: it is not one application, it is the release process underneath all of them. Whatever is built on EOS is versioned and released this way.</aside>
-</section>
-
-<section class="cs">
-  <p class="kicker">04 · Versioning &amp; Releases · How it works</p>
-  <h2>From a one-line description to a published release</h2>
-  <div class="flow">
-    <div class="flow-step"><span class="role">Developer</span><b>Describes the change</b><em>adds a short changeset: patch, minor or major</em></div>
+<section class="rel" data-ch="rel">
+  <p class="kicker">04 · Versioning &amp; Releases</p>
+  <h2>How it works</h2>
+  <div class="flow" data-stagger>
+    <div class="flow-step"><span class="role">Developer</span><b>Describes the change</b><em>Patch, minor or major</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">Automation</span><b>Checks the request</b><em>a change without a changeset is flagged before merge</em></div>
+    <div class="flow-step"><span class="role">Automation</span><b>Checks</b><em>No description? Flagged before merge</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">Automation</span><b>Prepares the release</b><em>version bump and changelog collected in one release request</em></div>
+    <div class="flow-step"><span class="role">Automation</span><b>Prepares</b><em>Version bump and changelog</em></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="role">Team</span><b>Releases</b><em>merging it creates the version tag and the release notes</em></div>
+    <div class="flow-step"><span class="role">Team</span><b>Releases</b><em>Merge = version tag + release notes</em></div>
   </div>
   <div class="term"><span class="p">$</span> ejotver add --type minor --message "add team boards"   <span class="c"># describe the change</span>
 <span class="p">$</span> ejotver status                                          <span class="c"># pending changes and the next version</span>
 <span class="p">$</span> ejotver bootstrap                                       <span class="c"># set up a new repository</span></div>
-  <aside class="notes">The developer writes one sentence and picks the type of change. Everything after that is automated: the check on the pull request, the version number, the changelog and the release itself. The team only decides when to release.</aside>
+  <aside class="notes">This topic is different from the three products: it is not one application, it is the release process underneath all of them. The need: the EOS platform consists of many applications, each in its own repository. Every one of them needs version numbers, a changelog and releases — the same way everywhere, without manual steps. The objective: one tool and one process for all frontends and services; every change describes itself in one sentence, written by the developer; version, changelog and release are created automatically. How it works: the developer writes one sentence and picks the type of change. Everything after that is automated: the check on the pull request, the version number, the changelog and the release itself. The team only decides when to release.</aside>
 </section>
 
-<section class="cs">
+<section class="rel" data-ch="rel">
   <p class="kicker">04 · Versioning &amp; Releases · In practice</p>
-  <h2>Every change is traceable — by date and by version</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/cs-changelog.png" alt="Published changelog of an application: version, date and changes for every release"></figure>
-    <div class="side">
-      <ul>
-        <li><b>Version, date and changes</b> in one place — for every release.</li>
-        <li>A developer who wants to see <b>what changed last week</b>, or on a specific day, finds it here in seconds.</li>
-        <li>Written <b>automatically</b> with every release — nobody maintains it by hand.</li>
-      </ul>
-      <p class="small">Published changelog of the Demand Management application.</p>
+  <h2><span class="t1">Traceable for developers.</span><span class="t2">Visible for users.</span></h2>
+  <div class="explorer">
+    <span class="fragment tabmark"></span>
+    <div class="tabs"><span class="tab">Changelog</span><span class="tab">Update notice</span></div>
+    <div class="panes">
+      <div><figure class="shot"><img src="img/cs-changelog.png" alt="Published changelog of an application: version, date and changes for every release"></figure>
+        <div class="say" data-stagger><h3>What changed, and when</h3><ul><li><b>Version, date, changes</b> — every release</li><li>Written <b>automatically</b></li></ul><p class="small">Changelog of Demand Management.</p></div></div>
+      <div><figure class="shot"><img src="img/cs-update.png" alt="Update notice in the platform: a newer build is ready to run"></figure>
+        <div class="say" data-stagger><h3>“Update available”</h3><ul><li>Released vs running version</li><li>Restart <b>now or later</b></li></ul></div></div>
     </div>
   </div>
-  <aside class="notes">This is the changelog an application publishes with every release. If a developer wants to track what they did last week, or which change went out on a certain day, it is all here: the date, the version and the change in plain language. Nobody writes this list by hand — it is built from the short descriptions developers add with the changeset tool.</aside>
+  <aside class="notes"><p><b>Changelog:</b> This is the changelog an application publishes with every release — here the Demand Management application. If a developer wants to track what they did last week, or which change went out on a certain day, it is all here: the date, the version and the change in plain language. Nobody writes this list by hand — it is built from the short descriptions developers add with the changeset tool.</p><p><b>Update notice:</b> The same version numbers also reach the user. The platform compares the released version with the one that is running. When a newer version of the platform or of the open application is deployed, a small notice appears and the user decides when to restart.</p></aside>
 </section>
 
-<section class="cs">
-  <p class="kicker">04 · Versioning &amp; Releases · In the platform</p>
-  <h2>Users are told when a new version is ready</h2>
-  <div class="split">
-    <figure class="shot"><img src="img/cs-update.png" alt="Update notice in the platform: a newer build is ready to run"></figure>
-    <div class="side">
-      <ul>
-        <li>The platform compares the <b>released version</b> with the one that is running.</li>
-        <li>When a newer version is deployed, the user sees <b>“Update available”</b> — restart now or later.</li>
-        <li>It runs on the version numbers the release process manages.</li>
-      </ul>
+<section class="rel" data-ch="rel">
+  <p class="kicker">04 · Versioning &amp; Releases · Status</p>
+  <h2>Rolled out across the platform</h2>
+  <div class="statsplit">
+    <div class="bigstat"><b data-count="77">77</b><span>frontend and service repositories on one release process</span><span class="st done lg">Delivered · In use</span></div>
+    <div class="tiles three ok" data-stagger>
+      <div class="tile"><b>Changeset CLI “ejotver”</b><span>add, status, version, release</span></div>
+      <div class="tile"><b>Release preparation</b><span>ready after every merge</span></div>
+      <div class="tile"><b>Tag &amp; release notes</b><span>created on approval</span></div>
+      <div class="tile"><b>Changeset check</b><span>flags changes without a description</span></div>
+      <div class="tile"><b>One-command setup</b><span>for a new repository</span></div>
+      <div class="tile"><b>Documentation</b><span>platform docs and Confluence</span></div>
     </div>
   </div>
-  <aside class="notes">The same version numbers also reach the user. When a newer version of the platform or of the open application is deployed, a small notice appears and the user decides when to restart.</aside>
-</section>
-
-<section class="cs">
-  <p class="kicker">04 · Versioning &amp; Releases · Delivery</p>
-  <h2>What I delivered — and where it is used</h2>
-  <div class="grid3">
-    <div class="mini"><b>Changeset CLI “ejotver”</b><span>one small command-line tool: add, status, version, release</span></div>
-    <div class="mini"><b>Automatic release preparation</b><span>version bump and changelog are ready after every merge</span></div>
-    <div class="mini"><b>Tag and release notes</b><span>created automatically when the release is approved</span></div>
-    <div class="mini"><b>Changeset check</b><span>changes without a description are flagged before merge</span></div>
-    <div class="mini"><b>One-command setup</b><span>a new repository is prepared with a single command</span></div>
-    <div class="mini"><b>Documentation</b><span>developer guide in the platform docs and on Confluence</span></div>
-  </div>
-  <p class="pillrow"><span class="pill own">Impact</span> Rolled out to <b>77 frontend and service repositories</b> — one release process across the EOS platform.</p>
-  <aside class="notes">The impact here is breadth: this is not tied to one product. Every frontend and service on the platform uses the same tool and the same release flow, including the three applications I just showed.</aside>
+  <aside class="notes">What I delivered: the changeset CLI “ejotver” — one small command-line tool with add, status, version and release; automatic release preparation, so version bump and changelog are ready after every merge; tag and release notes created automatically when the release is approved; the changeset check that flags changes without a description before merge; one-command setup for a new repository; and the developer guide in the platform docs and on Confluence. The impact here is breadth: this is not tied to one product. It is rolled out to 77 frontend and service repositories — every frontend and service on the platform uses the same tool and the same release flow, including the three applications I just showed.</aside>
 </section>
 
 <!-- ============================== CLOSING ============================== -->
-<section>
-  <p class="kicker">Summary</p>
-  <h2>Three products, one release process — one way of working</h2>
-  <div class="cards three">
-    <div class="card c-tt big">
-      <h3>Time Tracking</h3>
-      <p class="role-line">Process → product</p>
-      <p>Translated a finance process with four roles into a complete, clickable flow — and wrote the documentation for it.</p>
-    </div>
-    <div class="card c-tm big">
-      <h3>Task Management</h3>
-      <p class="role-line">Full-stack delivery</p>
-      <p>Delivered the requested features and my own ideas — across frontend and backend, in small reviewed steps.</p>
-    </div>
-    <div class="card c-rm big">
-      <h3>Risk Management</h3>
-      <p class="role-line">Design ownership</p>
-      <p>Owned architecture, API contract and prototype for a governance-critical module from the first page.</p>
-    </div>
+<section id="wrapup" data-ch="end">
+  <p class="kicker brand">Wrap-up</p>
+  <h2>Summary</h2>
+  <div class="outcomes" data-stagger>
+    <a class="outcome c-tt" href="#/tt"><em>Time Tracking</em><b>Process → product</b><p>A finance process with four roles, made clickable.</p><span class="st hold">On hold</span></a>
+    <a class="outcome c-tm" href="#/tm"><em>Task Management</em><b>Full-stack delivery</b><p>Requested features plus my own ideas.</p><span class="st done">Delivered · In use</span></a>
+    <a class="outcome c-rm" href="#/rm"><em>Risk Management</em><b>Design ownership</b><p>Architecture, contract and prototype.</p><span class="st prog">In progress</span></a>
+    <a class="outcome c-rel" href="#/rel"><em>Versioning &amp; Releases</em><b>Platform contribution</b><p>One release process for 77 repositories.</p><span class="st done">Delivered · In use</span></a>
   </div>
-  <div class="bar c-cs"><b>Versioning &amp; Releases</b><span><i>Platform contribution</i> — one release process, used by every application on the platform.</span></div>
-  <div class="strengths">
-    <div><b>I start from the business problem</b><span>roles, rules and hand-overs before screens</span></div>
-    <div><b>I make things tangible early</b><span>clickable results within days</span></div>
-    <div><b>I think about the user</b><span>and add what makes daily work easier</span></div>
-    <div><b>I work transparently</b><span>small reviewed steps, clear status, written documentation</span></div>
-  </div>
-  <aside class="notes">If you remember one slide, this one. Three different situations — a new process, an existing product, a blank page — plus one contribution that serves every application on the platform. And the same way of working in each.</aside>
+  <div class="story way"><em>One way of working</em><span>Business problem first</span><span>Tangible early</span><span>The user in mind</span><span>Transparent</span></div>
+  <aside class="notes">If you remember one slide, this one. Three different situations — a new process, an existing product, a blank page — plus one contribution that serves every application on the platform. And the same way of working in each: I start from the business problem, I make things tangible early, I think about the user and add what makes daily work easier, and I work transparently — small reviewed steps, clear status, written documentation.</aside>
 </section>
 
-<section>
-  <p class="kicker">Current status &amp; progress</p>
-  <h2>Where each topic stands today</h2>
-  <div class="cards four">
-    <div class="card c-tt"><h3>Time Tracking</h3><p>All screens for the four roles are complete. The backend is implemented; merging it is the next step. The SAP posting is simulated.</p><p class="when">Screens complete · backend to merge</p></div>
-    <div class="card c-tm"><h3>Task Management</h3><p>The requested features and my own additions are delivered, in frontend and backend.</p><p class="when">Delivered</p></div>
-    <div class="card c-rm"><h3>Risk Management</h3><p>Design, API contract and prototype are complete. The backend has started: configuration and risk register work on real data.</p><p class="when">Prototype complete · backend started</p></div>
-    <div class="card c-cs"><h3>Versioning &amp; Releases</h3><p>In use: one release process, rolled out to 77 frontend and service repositories.</p><p class="when">In use platform-wide</p></div>
+<section id="status" data-ch="end">
+  <p class="kicker brand">Status</p>
+  <h2>Where everything stands</h2>
+  <div class="board4" data-stagger>
+    <a class="col c-tt hold" href="#/tt"><span class="no">01</span><h3>Time Tracking</h3><span class="st hold">On hold</span>
+      <div class="meter"><i class="done"></i><i class="hold"></i><i class="todo"></i></div>
+      <div class="row done"><span class="dot"></span><span><b>Screens</b> for all four roles</span></div>
+      <div class="row hold"><span class="dot"></span><span><b>Backend</b> — merge pending</span></div>
+      <div class="row todo"><span class="dot"></span><span><b>SAP interface</b> — to agree</span></div></a>
+    <a class="col c-tm done" href="#/tm"><span class="no">02</span><h3>Task Management</h3><span class="st done">Delivered · In use</span>
+      <div class="meter"><i class="done"></i><i class="done"></i><i class="done"></i></div>
+      <div class="row done"><span class="dot"></span><span><b>Requested</b> features</span></div>
+      <div class="row done"><span class="dot"></span><span><b>My own</b> additions</span></div>
+      <div class="row done"><span class="dot"></span><span><b>Frontend</b> and backend</span></div></a>
+    <a class="col c-rm prog" href="#/rm"><span class="no">03</span><h3>Risk Management</h3><span class="st prog">In progress</span>
+      <div class="meter"><i class="done"></i><i class="prog"></i><i class="todo"></i></div>
+      <div class="row done"><span class="dot"></span><span><b>Design, contract,</b> prototype</span></div>
+      <div class="row prog"><span class="dot"></span><span><b>Backend</b> — first increment</span></div>
+      <div class="row todo"><span class="dot"></span><span><b>Remaining</b> backend</span></div></a>
+    <a class="col c-rel done" href="#/rel"><span class="no">04</span><h3>Versioning &amp; Releases</h3><span class="st done">Delivered · In use</span>
+      <div class="meter"><i class="done"></i><i class="done"></i><i class="done"></i></div>
+      <div class="row done"><span class="dot"></span><span><b>Changeset CLI</b> “ejotver”</span></div>
+      <div class="row done"><span class="dot"></span><span><b>77</b> repositories</span></div>
+      <div class="row done"><span class="dot"></span><span><b>Documentation</b></span></div></a>
   </div>
-  <aside class="notes">One line per topic. Task Management and the release process are delivered. Time Tracking is complete on the screens and waits for the backend merge. Risk Management has moved from prototype into the first backend increment.</aside>
+  <aside class="notes">One column per topic. Time Tracking: all screens for the four roles are complete; the backend is implemented and merging it is the next step; the SAP posting is simulated. Task Management: the requested features and my own additions are delivered, in frontend and backend. Risk Management: design, API contract and prototype are complete; the backend has started — configuration and risk register work on real data. Versioning and Releases: in use — one release process, rolled out to 77 frontend and service repositories. Click a column to go back to that chapter.</aside>
 </section>
 
-<section>
-  <p class="kicker">What works well · Current challenges</p>
-  <h2>What is working well — and what is still open</h2>
+<section data-ch="end">
+  <p class="kicker brand">Wins &amp; blockers</p>
+  <h2>What works. What is open.</h2>
   <div class="cols">
-    <div>
-      <h4 class="ok">Working particularly well</h4>
-      <ul>
-        <li><b>Clickable prototypes early</b> — the process is discussed on real screens before the backend is built.</li>
-        <li><b>Contract first</b> — in Risk Management, screens and backend are built against one agreed API.</li>
-        <li><b>Small, reviewed steps</b> — Task Management was delivered feature by feature.</li>
-        <li><b>One release process</b> — versions and changelogs are created automatically.</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="warn">Current challenges and blockers</h4>
-      <ul>
-        <li><b>SAP interface</b> — the posting format is still to be agreed with CO; until then it stays simulated.</li>
-        <li><b>Time Tracking backend</b> — the merge is pending; until then the screens run on sample data.</li>
-        <li><b>Risk Management backend</b> — most of it is still to be built; the scope is to be confirmed with the stakeholders.</li>
-        <li><b>Tests and languages</b> — automated tests for the screens and German texts for Risk Management are still to come.</li>
-      </ul>
-    </div>
+    <div class="lane done"><header>Working well <i>4</i></header><div data-stagger>
+      <div class="item"><b>Prototypes early</b><span>real screens before the backend</span></div>
+      <div class="item"><b>Contract first</b><span>screens and backend on one agreed API</span></div>
+      <div class="item"><b>Small, reviewed steps</b><span>feature by feature</span></div>
+      <div class="item"><b>One release process</b><span>versions and changelogs, automatically</span></div>
+    </div></div>
+    <div class="lane" style="--s:var(--ink)"><header>Open points <i>4</i></header><div data-stagger>
+      <div class="item todo"><b>SAP interface</b><span>posting format to agree with CO — simulated until then</span></div>
+      <div class="item hold"><b>Time Tracking backend</b><span>merge pending — sample data until then</span></div>
+      <div class="item prog"><b>Risk Management backend</b><span>most still to build; scope to confirm</span></div>
+      <div class="item todo"><b>Tests and languages</b><span>screen tests, German texts for Risk Management</span></div>
+    </div></div>
   </div>
-  <aside class="notes">What works well is the way of working: show it early, agree the contract, deliver in small steps, release automatically. The open points are concrete: one decision with CO on the SAP interface, one pending merge, and the remaining Risk Management backend.</aside>
+  <aside class="notes">What works well is the way of working: show it early, agree the contract, deliver in small steps, release automatically. Clickable prototypes early — the process is discussed on real screens before the backend is built. Contract first — in Risk Management, screens and backend are built against one agreed API. Small, reviewed steps — Task Management was delivered feature by feature. One release process — versions and changelogs are created automatically. The open points are concrete: the SAP posting format is still to be agreed with CO, until then it stays simulated; the Time Tracking backend merge is pending, until then the screens run on sample data; most of the Risk Management backend is still to be built and the scope is to be confirmed with the stakeholders; automated tests for the screens and German texts for Risk Management are still to come.</aside>
 </section>
 
-<section>
-  <p class="kicker">Next steps &amp; expectations</p>
-  <h2>What comes next — and what I need for it</h2>
+<section data-ch="end">
+  <p class="kicker brand">Wrap-up</p>
+  <h2>Next steps</h2>
   <div class="cols">
     <div>
       <h4>Next steps</h4>
-      <ul>
-        <li><b>Time Tracking:</b> merge the backend, connect the screens, agree the SAP interface.</li>
-        <li><b>Task Management:</b> collect user feedback and prioritise improvements.</li>
-        <li><b>Risk Management:</b> confirm the scope with the stakeholders and continue the backend.</li>
-        <li><b>Versioning &amp; Releases:</b> support the teams and keep the guide up to date.</li>
-      </ul>
+      <div class="nexts" data-stagger>
+        <div class="next c-tt"><b>Time Tracking</b><span>Merge backend · connect screens · agree SAP interface</span></div>
+        <div class="next c-tm"><b>Task Management</b><span>Done · new features as requirements arise</span></div>
+        <div class="next c-rm"><b>Risk Management</b><span>Confirm scope · continue the backend</span></div>
+        <div class="next c-rel"><b>Versioning &amp; Releases</b><span>Done · support for the teams as needed</span></div>
+      </div>
     </div>
     <div>
-      <h4>What I need to move forward</h4>
-      <ul>
-        <li>A <b>decision on the SAP interface</b>, together with CO.</li>
-        <li><b>Review and merge</b> of the Time Tracking backend.</li>
-        <li><b>Time with the stakeholders</b> for the Risk Management walkthrough.</li>
-        <li><b>Your priorities</b> across the four topics.</li>
-      </ul>
+      <h4>What I need from you</h4>
+      <div class="asks" data-stagger>
+        <div class="ask"><span>A <b>decision on the SAP interface</b>, with CO</span></div>
+        <div class="ask"><span><b>Review and merge</b> of the Time Tracking backend</span></div>
+        <div class="ask"><span><b>Stakeholder time</b> for the Risk Management walkthrough</span></div>
+      </div>
     </div>
   </div>
-  <aside class="notes">The next steps are clear for each topic. What I need from this round are three things: the SAP interface decision, the backend review for Time Tracking, and stakeholder time for Risk Management — plus your view on priorities.</aside>
+  <aside class="notes">The next steps are clear for each topic. Time Tracking: merge the backend, connect the screens, agree the SAP interface. Task Management: it is done and in use; further features can be added whenever a new requirement comes up. Risk Management: confirm the scope with the stakeholders and continue the backend. Versioning and Releases: it is done and in use on every repository; I support the teams as needed and keep the guide up to date. What I need from this round are three things: the SAP interface decision, the backend review for Time Tracking, and stakeholder time for Risk Management.</aside>
 </section>
 
-<section>
-  <p class="kicker">Learnings</p>
-  <h2>My most important learnings</h2>
-  <ul class="big">
-    <li><b>Understand the process first.</b> Roles, rules and hand-overs decide the design — the screens follow.</li>
-    <li><b>Show it early.</b> A clickable prototype gets clearer feedback than a description.</li>
-    <li><b>Agree the contract before building.</b> It gives screens and backend one common basis.</li>
-    <li><b>A tool for everyone has to be simple.</b> One command to set up and one short guide.</li>
-    <li><b>Be plain about status.</b> Say what is finished, what is simulated and what is open.</li>
-  </ul>
-  <aside class="notes">Five learnings, one from each situation: the finance process in Time Tracking, the prototypes, the Risk Management contract, the platform-wide release tool — and, across all of them, being clear about what is done and what is not.</aside>
-</section>
-
-<section>
-  <p class="kicker">Outlook</p>
-  <h2>What I would like to take forward</h2>
-  <div class="cards three">
-    <div class="card c-tt big"><h3>From prototype to daily use</h3><p>Bring each solution into productive use, step by step and together with the business.</p></div>
-    <div class="card c-tm big"><h3>Keep listening to users</h3><p>Collect feedback early and keep improving the experience with every release.</p></div>
-    <div class="card c-rm big"><h3>Grow with the platform</h3><p>Take on further topics and share what I have learned with the team.</p></div>
+<section data-ch="end">
+  <p class="kicker brand">Wrap-up</p>
+  <h2>Learnings</h2>
+  <div class="seq">
+    <span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span><span class="fragment tabmark"></span>
+    <div class="learn" data-stagger>
+      <div class="pick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h5v5H4zM15 14h5v5h-5zM9 7.5h5a3.5 3.5 0 0 1 3.5 3.5v3"/></svg><b>Process first</b><em>Know who does what, and when. The screens follow.</em><a class="chip c-tt" href="#/tt">Time Tracking</a></div>
+      <div class="pick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg><b>Show it early</b><em>People react better to something they can click than to a description.</em><span class="chip plain">Every prototype</span></div>
+      <div class="pick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v4h4M10 14l2 2 4-4"/></svg><b>Agree, then build</b><em>Agree what the system must do before building it.</em><a class="chip c-rm" href="#/rm">Risk Management</a></div>
+      <div class="pick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 10l3 2-3 2M13 14h3"/></svg><b>Keep it simple</b><em>A tool for everyone needs an easy start and a short guide.</em><a class="chip c-rel" href="#/rel">Versioning &amp; Releases</a></div>
+      <div class="pick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/></svg><b>Transparency</b><em>Say clearly what is finished, what is a demo and what is still open.</em><span class="chip plain">Across all four</span></div>
+    </div>
   </div>
-  <p class="ask">Your <b>feedback and priorities</b> will guide the next steps.</p>
+  <aside class="notes">Five learnings, one from each situation: the finance process in Time Tracking — understand the process first, the screens follow; the prototypes — show it early; the Risk Management contract — agree what the system must do before building it; the platform-wide release tool — a tool for everyone has to be simple; and, across all of them, transparency — saying clearly what is finished, what is simulated and what is open.</aside>
 </section>
 
-<section class="title-slide">
-  <p class="kicker">Discussion</p>
-  <h1>Thank you.<br><span class="grad">Questions &amp; feedback</span></h1>
-  <p class="lead">Three products and one platform-wide release process —<br>I am happy to go deeper into any screen or decision.</p>
+<section class="title-slide thanks" data-ch="end">
+  <div class="aura"><i></i><i></i><i></i></div>
+  <p class="kicker brand">Discussion</p>
+  <h1>Thank you.<br><span class="shine">Questions &amp; feedback</span></h1>
+  <p class="askme">Ask me about<span class="topic c-tt">who is missing this month</span></p>
   <div class="chips">
-    <span class="chip c-tt">Time Tracking</span>
-    <span class="chip c-tm">Task Management</span>
-    <span class="chip c-rm">Risk Management</span>
-    <span class="chip c-cs">Versioning &amp; Releases</span>
+    <a class="chip c-tt" href="#/tt">Time Tracking</a>
+    <a class="chip c-tm" href="#/tm">Task Management</a>
+    <a class="chip c-rm" href="#/rm">Risk Management</a>
+    <a class="chip c-rel" href="#/rel">Versioning &amp; Releases</a>
+    <a class="chip plain" href="#/status">Status board</a>
   </div>
-  <p class="byline"><b>Fatima</b> · EJOT Engineering Platform (EOS)</p>
+  <p class="byline"><b>Taking forward:</b> from prototype to daily use · keep listening to users · grow with the platform</p>
+  <p class="byline" style="margin-top:10px"><b>Midhat</b> · EJOT Engineering Platform (EOS)</p>
+  <div class="reel">
+    <div class="stack">
+      <figure class="shot c-tt p0" data-topic="who is missing this month"><img src="img/tt-teamstatus.png" alt="Time Tracking · Team status"><figcaption>Time Tracking · Team status</figcaption></figure>
+      <figure class="shot c-tm p1" data-topic="a task in five seconds"><img src="img/tm-quickcapture.png" alt="Task Management · Quick capture"><figcaption>Task Management · Quick capture</figcaption></figure>
+      <figure class="shot c-rm p2" data-topic="the clickable risk matrix"><img src="img/rm-dashboard.png" alt="Risk Management · Dashboard"><figcaption>Risk Management · Dashboard</figcaption></figure>
+      <figure class="shot c-rel" data-topic="one release process"><img src="img/cs-update.png" alt="Versioning &amp; Releases · Update notice"><figcaption>Versioning &amp; Releases · Update notice</figcaption></figure>
+      <figure class="shot c-tt" data-topic="the checks before SAP"><img src="img/tt-close.png" alt="Time Tracking · Month-end close"><figcaption>Time Tracking · Month-end close</figcaption></figure>
+      <figure class="shot c-tm" data-topic="planning a realistic day"><img src="img/tm-today.png" alt="Task Management · Today"><figcaption>Task Management · Today</figcaption></figure>
+      <figure class="shot c-rm" data-topic="approval by rule"><img src="img/rm-measure-approval.png" alt="Risk Management · Approval chain"><figcaption>Risk Management · Approval chain</figcaption></figure>
+      <figure class="shot c-tm" data-topic="team boards"><img src="img/tm-teamboard.png" alt="Task Management · Team board"><figcaption>Task Management · Team board</figcaption></figure>
+      <figure class="shot c-rm" data-topic="the IT Risk Board"><img src="img/rm-board.png" alt="Risk Management · IT Risk Board"><figcaption>Risk Management · IT Risk Board</figcaption></figure>
+    </div>
+    <div class="dots"></div>
+  </div>
+  <aside class="notes">Three products and one platform-wide release process — I am happy to go deeper into any screen or decision; the chips jump straight to a chapter. While we talk, the slide keeps moving: every few seconds it brings up another screen and a topic to ask about; a dot under the screens jumps to one, a click on the front screen enlarges it, and the rotation waits while the mouse is over the screens. What I would like to take forward: bring each solution from prototype into productive daily use, step by step and together with the business; keep listening to users — collect feedback early and keep improving the experience with every release; and grow with the platform — take on further topics and share what I have learned with the team. Your feedback and priorities will guide the next steps.</aside>
 </section>
 
 </div>
@@ -937,19 +660,128 @@
 <script src="vendor/reveal.js"></script>
 <script src="vendor/notes.js"></script>
 <script>
+  var printing = /print-pdf/.test(location.search);
+  // keys 1–5 jump to a chapter, like the chapter bar in the footer
+  function jump(id) { return function () { Reveal.slide(Reveal.getIndices(document.getElementById(id)).h); }; }
   Reveal.initialize({
-    width: 1360, height: 765, margin: 0.02,
-    hash: true, slideNumber: false, controls: false, progress: true,
+    width: 1360, height: 765, margin: 0,
+    hash: true, slideNumber: false, controls: false, progress: false,
     center: false, transition: 'fade', transitionSpeed: 'fast',
+    keyboard: { 49: jump('tt'), 50: jump('tm'), 51: jump('rm'), 52: jump('rel'), 53: jump('status') },
     plugins: [RevealNotes]
   });
+
+  // tabs and steps: arrow keys go through them (they are fragments), a click jumps to one
+  document.querySelectorAll('.explorer, .seq').forEach(function (box) {
+    box.querySelectorAll('.tab, .pick').forEach(function (item, i) {
+      item.addEventListener('click', function () { Reveal.navigateFragment(i - 1); });
+    });
+  });
+
+  // chapter bar: earlier chapters are ticked, the current one fills its ring slide by slide
+  var order = ['tt', 'tm', 'rm', 'rel', 'end'];
+  var nav = document.querySelector('.f-nav');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.slides > section'));
+  function place() {
+    var slide = Reveal.getCurrentSlide();
+    if (!slide) return;
+    var at = order.indexOf(slide.dataset.ch);
+    nav.querySelectorAll('a').forEach(function (a) {
+      var i = order.indexOf(a.dataset.ch);
+      a.classList.toggle('on', i === at);
+      a.classList.toggle('was', i < at);
+    });
+    var chapter = sections.filter(function (s) { return s.dataset.ch === slide.dataset.ch; });
+    var tabs = slide.querySelectorAll('.fragment').length, shown = slide.querySelectorAll('.fragment.visible').length;
+    nav.style.setProperty('--p', 100 * (chapter.indexOf(slide) + (shown + 1) / (tabs + 1)) / chapter.length);
+  }
+  // numbers count up when their slide opens
+  function count(slide) {
+    if (printing) return;
+    slide.querySelectorAll('[data-count]').forEach(function (el) {
+      if (!el.offsetParent) return; // not on screen yet (a later step)
+      var to = Number(el.dataset.count), start = performance.now();
+      (function tick(now) {
+        var p = Math.min(1, (now - start) / 800);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }
+  Reveal.on('ready', function (e) { place(); count(e.currentSlide); });
+  Reveal.on('slidechanged', function (e) { place(); count(e.currentSlide); });
+  Reveal.on('fragmentshown', function () { place(); count(Reveal.getCurrentSlide()); });
+  Reveal.on('fragmenthidden', place);
+
+  // extras: click or hover a chip to read its one-line explanation
+  document.querySelectorAll('.extras').forEach(function (box) {
+    var detail = box.querySelector('.detail'), chips = box.querySelectorAll('.x');
+    chips.forEach(function (chip) {
+      function show() {
+        chips.forEach(function (other) { other.classList.toggle('sel', other === chip); });
+        var name = document.createElement('b');
+        name.textContent = chip.textContent;
+        detail.classList.remove('hint');
+        detail.replaceChildren(name, document.createTextNode(chip.dataset.d));
+      }
+      chip.addEventListener('click', show);
+      chip.addEventListener('mouseenter', show);
+    });
+  });
+
+  // thank-you slide: a slow reel of screens, each with a topic to ask about.
+  // The active dot fills over a few seconds (CSS); when it is full, the reel moves on.
+  document.querySelectorAll('.reel').forEach(function (reel) {
+    var cards = Array.prototype.slice.call(reel.querySelectorAll('figure'));
+    var dots = reel.querySelector('.dots'), slide = reel.closest('section'), at = 0;
+    function show(next) {
+      next = (next + cards.length) % cards.length;
+      if (next === at) return;
+      var leaving = cards[at];
+      cards.forEach(function (card, i) {
+        var pos = (i - next + cards.length) % cards.length;
+        card.classList.remove('p0', 'p1', 'p2', 'out');
+        if (pos < 3) card.classList.add('p' + pos);
+      });
+      if (!leaving.classList.contains('p1') && !leaving.classList.contains('p2')) {
+        leaving.classList.add('out');
+        setTimeout(function () { leaving.classList.remove('out'); }, 1000);
+      }
+      at = next;
+      dots.querySelectorAll('i').forEach(function (dot, i) { dot.classList.toggle('on', i === at); });
+      var topic = document.createElement('span');
+      topic.className = 'topic ' + cards[at].className.match(/c-\w+/)[0];
+      topic.textContent = cards[at].dataset.topic;
+      slide.querySelector('.topic').replaceWith(topic);
+    }
+    cards.forEach(function (card, i) {
+      var dot = document.createElement('i');
+      if (i === 0) dot.className = 'on';
+      dot.title = card.querySelector('figcaption').textContent;
+      dot.addEventListener('click', function () { show(i); });
+      dots.appendChild(dot);
+    });
+    dots.addEventListener('animationend', function (e) { if (e.animationName === 'fill') show(at + 1); });
+  });
+
+  // PDF copy: put the template frame on every page
+  Reveal.on('pdf-ready', function () {
+    var frame = document.querySelector('.reveal > .frame');
+    document.querySelectorAll('.pdf-page').forEach(function (page) { page.appendChild(frame.cloneNode(true)); });
+  });
+
   // click a screenshot to enlarge it
   var lb = document.getElementById('lightbox');
   document.querySelectorAll('.shot img').forEach(function (img) {
     img.addEventListener('click', function () { lb.firstElementChild.src = img.src; lb.classList.add('open'); });
   });
   lb.addEventListener('click', function () { lb.classList.remove('open'); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+  // any key closes the zoom; Esc is kept from reveal.js, where it would open the slide overview
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    lb.classList.remove('open');
+    if (e.key === 'Escape') { e.stopImmediatePropagation(); e.preventDefault(); }
+  }, true);
 </script>
 </body>
 </html>
